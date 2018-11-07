@@ -1,2 +1,4 @@
-# Group-3-Project
-Group 3 Coding Bootcamp project #1.
+# Team Singapore - Project 1 
+Team Singapore Coding Bootcamp project #1.
+
+November 2018
