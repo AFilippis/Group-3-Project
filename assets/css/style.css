@@ -1,4 +1,62 @@
+/* Overall Styling */
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Julius Sans One', sans-serif;
+}
+
+#gradient {
+    height: 100%;
+    background: linear-gradient(140deg, white, gray, darkslategray, black);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Header */
+#header-container{
+    background-color: darkgray;
+}
+
+/* Enter Page */
+
+/* Info */
+#info-container {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background-color: rgb(238, 236, 236, 0.4);
+    /* border: 1px solid rgb(238, 236, 236, 0.4);
+    border-radius: 4px; */
+}
+/* Main Body */
+.card {
+    background-color: rgb(255, 255, 255, 0.9)
+}
+#analyze-btn{
+    background-color: white;
+}
+
 ul {
     list-style-type: none;
-    padding-left: 0;
+    padding-left: 0px;
+    margin-left: 2px;
+}
+
+.filter-selector-btn {
+    width: 100%;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    margin-bottom: 4px;
+    background-color: white;
+}
+
+#context-box {
+    margin-bottom: 8px;
+}
+
+/* Footer */
+#footer-container {
+    background-color: darkgray;
 }
