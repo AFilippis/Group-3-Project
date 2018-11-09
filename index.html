@@ -17,12 +17,117 @@
 </head>
 
 <body>
+    <!-- Entry Page -->
+    <!-- <wrapper>
+        <h1>Meud</h1>
+        <h3>Subtext, simplified</h3>
+        <button>Enter</button>
+    </wrapper> -->
 
-    <h1>Title Here</h1>
-    
-<!-- Scripts -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script type="text/javascript" src="assets/javascript/app.js"></script>
+    <!-- Header and Navbar -->
+    <header>
+        <div class="container-fluid">
+            <div class="navbar">
+                <div class="navbar-brand">
+                    <h3>Meud (logo holder)</h3>
+                </div>
+
+
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Application</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">About Us</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container col-lg-10">
+            <div class="row">
+                <!-- Application Input -->
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Input</h4>
+                            <hr>
+                            <form>
+                                <div class="form-group">
+                                    <textarea type="inputText" class="form-control" id="analyzeInputText" placeholder="Enter text here."></textarea>
+                                    <small id="analyzeHelp" class="form-text text-muted">Enter the text you want
+                                        analyzed for different tones.</small>
+                                </div>
+                                <button type="submit" class="btn">
+                                    Analyze
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Application Result -->
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Result</h4>
+                            <hr>
+                            <div class="row">
+                                <div id="filters" class="col-sm-3">
+                                    <div id="filters-tone-list">
+                                        <ul id="tone-selectors">
+
+                                            <li>
+                                                <h5>Tones</h5>
+                                            </li>
+
+                                            <li id="filter-analytical" class="filter-selector">Analytical</li>
+
+                                            <li id="filter-anger" class="filter-selector">Anger</li>
+
+                                            <li id="filter-confident" class="filter-selector">Confident</li>
+
+                                            <li id="filter-fear" class="filter-selector">Fear</li>
+
+                                            <li id="filter-joy" class="filter-selector">Joy</li>
+
+                                            <li id="filter-sadness" class="filter-selector">Sadness</li>
+                                            
+                                            <li id="filter-tentative" class="filter-selector">Tentative</li>
+
+                                        </ul>
+
+                                    </div>
+                                </div>
+                                <div class="col-sm-9">
+                                    <div id="analyzeInputTextResult" class="border">
+                                        This is some text within a card body.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container-fluid fixed-bottom">
+            <div class="container text-center mt-3">
+                <span>Copyright &copy;</span>
+            </div>
+        </div>
+
+    </footer>
+    <!-- Scripts -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
 </body>
 
 </html>
