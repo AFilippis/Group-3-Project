@@ -23,14 +23,14 @@ h1, h2, h3, h4, h5, h6 {
 /* Enter Page */
 
 /* Info */
-#info-container {
+.info-container {
     padding-top: 1em;
     padding-bottom: 1em;
     background-color: rgb(238, 236, 236, 0.4);
     /* border: 1px solid rgb(238, 236, 236, 0.4);
     border-radius: 4px; */
 }
-/* Main Body */
+/* Main application body */
 .card {
     background-color: rgb(255, 255, 255, 0.9)
 }
@@ -54,6 +54,15 @@ ul {
 
 #context-box {
     margin-bottom: 8px;
+}
+
+/* Developer page */
+.dev-img{
+    align-content: center;
+    /* Need help with media resizing */
+    height: 256px;
+    width: 256px;
+    border-radius: 50%;
 }
 
 /* Footer */
