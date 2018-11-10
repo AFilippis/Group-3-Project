@@ -121,6 +121,13 @@ ul {
     box-shadow: 0 4px 8px 0 rgb(66, 66, 66), 0 6px 20px 0 rgb(66, 66, 66);
 }
 
+#social-links li{
+    display: inline;
+}
+
+.social-icon{
+    padding:2px;
+}
 /* Footer */
 #footer-container {
     background-color: gray;
