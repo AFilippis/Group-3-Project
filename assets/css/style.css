@@ -108,6 +108,7 @@ ul {
 
 .dev-card:hover{
     background-color: rgb(255, 255, 255, 1);
+    box-shadow: 0 4px 8px 0 rgb(66, 66, 66), 0 2px 20px 0 rgb(66, 66, 66);
 }
 
 .dev-img{
@@ -118,7 +119,7 @@ ul {
     height: 15vw;
     width: 100%;
     border-radius: 50%;
-    box-shadow: 0 4px 8px 0 rgb(66, 66, 66), 0 6px 20px 0 rgb(66, 66, 66);
+    /* box-shadow: 0 4px 8px 0 rgb(66, 66, 66), 0 2px 20px 0 rgb(66, 66, 66); */
 }
 
 #social-links li{
