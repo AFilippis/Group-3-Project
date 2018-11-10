@@ -2,24 +2,47 @@
 html, body {
     margin: 0;
     height: 100%;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Julius Sans One', sans-serif;
-}
-
-#gradient {
-    height: 100%;
+    font-family: 'Georgia', serif;
     background: linear-gradient(140deg, white, gray, darkslategray, black);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-/* Header */
-#header-container{
-    background-color: darkgray;
+h1, h2, h3, h4, h5, h6 {
+    /* font-family: 'Julius Sans One', sans-serif; */
+    font-family: 'Raleway', sans-serif;
 }
 
+/* #gradient {
+    height: 100%;
+    background: linear-gradient(140deg, white, gray, darkslategray, black);
+    background-size: cover;
+    background-repeat: no-repeat;
+} */
+
+/* Header */
+#header-container{
+    background-color: gray;
+    /* Adds shadow only to the bottom, not the sides */
+    box-shadow: 0px 1px 5px rgb(66, 66, 66);
+    margin-top: 12px;
+}
+h1.MEUD-logo {
+    font-size: 3em;
+}
+.MEUD-logo{
+    font-family: 'Snippet', sans-serif;
+}
+.text-color-dsg{
+    color: darkslategray;
+}
+.nav-link{
+    font-family: 'Raleway', sans-serif;
+}
+
+#app-link {
+    border-right: 1px solid rgb(66, 66, 66);
+}
 /* Enter Page */
 
 /* Info */
@@ -30,11 +53,21 @@ h1, h2, h3, h4, h5, h6 {
     /* border: 1px solid rgb(238, 236, 236, 0.4);
     border-radius: 4px; */
 }
+
+h3 > span.MEUD-logo{
+    font-size: 32px;
+}
 /* Main application body */
+.card-title{
+    font-family: 'Raleway', sans-serif;
+}
+
 .card {
     background-color: rgb(255, 255, 255, 0.9)
 }
 #analyze-btn{
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
     background-color: white;
 }
 
@@ -45,6 +78,8 @@ ul {
 }
 
 .filter-selector-btn {
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
     width: 100%;
     padding-bottom: 8px;
     padding-top: 8px;
@@ -63,9 +98,10 @@ ul {
     height: 256px;
     width: 256px;
     border-radius: 50%;
+    box-shadow: 0 4px 8px 0 rgb(66, 66, 66), 0 6px 20px 0 rgb(66, 66, 66);
 }
 
 /* Footer */
 #footer-container {
-    background-color: darkgray;
+    background-color: gray;
 }
