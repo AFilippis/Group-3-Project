@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css?family=Megrim" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat+Subrayada" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css?family=Snippet" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Hairline" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 
     <!-- Title -->
@@ -23,7 +24,7 @@
 </head>
 
 <body>
-    <div id="gradient">
+    <div id="blackout">
         <!-- Entry Page -->
         <!-- <wrapper>
         <h1>Meud</h1>
@@ -34,7 +35,7 @@
         <!-- Header and Navbar -->
         <header>
             <div id="header-container" class="container-fluid">
-                <div class="navbar">
+                <nav class="navbar">
                     <div class="navbar-brand text-white">
                         <h1 class="MEUD-logo">ME<span class="text-color-dsg">U</span>D</h1>
                     </div>
@@ -49,23 +50,24 @@
                         </li>
                     </ul>
 
-                </div>
+                </nav>
             </div>
         </header>
 
-        <br>
+        <div class="line-break"></div>
 
         <!-- Main Content -->
-        <main>
+        <main class="container-fluid">
 
             <div class="container col-lg-11">
                 <!-- Initial info - what it does -->
                 <div class="info-container container-fluid">
                     <div class="row">
                         <div class="container col-lg-11">
-                            <h3 class="text-center">WELCOME TO <span class="MEUD-logo">ME<span class="text-white">U</span>D</span></h3>
+                            <h3 class="text-center">WELCOME TO <span>ME<span class="text-color-dsg">U</span>D</span></h3>
                             <hr>
-                            <p class="text-center text-dark">Test resumes, business e-mails, articles, tweets, and various other
+                            <p class="text-center text-dark">Test resumes, business e-mails, articles, tweets, and
+                                various other
                                 forms of text for different tones. Our application utilizing the powerful
                                 APIs of IBM's Watson and (insert other API here) will return a result for you analyzed
                                 for
@@ -74,10 +76,12 @@
                         </div>
                     </div>
                 </div>
-                <br>
+                
+                <div class="line-break"></div>
+
                 <div class="row">
                     <!-- Application Input -->
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title text-center"><strong>INPUT</strong></h5>
@@ -98,7 +102,7 @@
                     </div>
 
                     <!-- Application Result -->
-                    <div class="col-md-6">
+                    <div class="col-md-8">
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title text-center"><strong>RESULT</strong></h5>
@@ -135,7 +139,9 @@
                                                         The description of the selected filter will go here.
                                                     </span>
                                                 </div>
-                                                <br>
+                                                <div class="line-break"></d
+                                                    iv>
+
                                                 <!-- Legend for highlighted text tone strength -- Needs work -- Needs to make 3 divs, different colors, appended with tone-strength number -->
                                                 <div id="filter-strength-legend">
                                                     There needs to be 3 divs here created on filter selection of
@@ -161,13 +167,28 @@
             </div>
         </main>
 
-        <br>
+
+        <div class="line-break"></div>
+
 
         <!-- Footer -->
         <footer>
-            <div id="footer-container" class="container-fluid fixed-bottom">
-                <div class="container text-center text-dark mt-3">
-                    <p>&copy; <span class="MEUD-logo text-white">ME<span class="text-color-dsg">U</span>D</span> | Made during and developed for UNC Coding Bootcamp 2018-2019.</p>
+            <div id="footer-container" class="container-fluid  text-center fixed-bottom">
+                <nav id="footer-navbar" class="navbar">
+                    <ul id="footer-nav" class="nav mx-auto">
+                        <li id="footer-app-link" class="footer-nav-item nav-item">
+                            <a class="nav-link text-light" href="index.html">APPLICATION</a>
+                        </li>
+                        <li id="footer-dev-link" class="footer-nav-item nav-item">
+                            <a class="nav-link text-light" href="developers.html">DEVELOPERS</a>
+                        </li>
+                    </ul>
+                </nav>
+                <hr>
+                <div class="container text-dark">
+                    <div id="copyright-container" class="container">&copy; <span class="MEUD-logo text-white">ME<span class="text-color-dsg">U</span>D</span>
+                        | Made
+                        during and developed for UNC Coding Bootcamp 2018-2019.</div>
                 </div>
             </div>
         </footer>
