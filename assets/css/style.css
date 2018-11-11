@@ -81,12 +81,20 @@ h3 > span.MEUD-logo{
     background-color: white;
 }
 
+#analyze-btn:hover{
+    box-shadow: 0 2px 10px 0 rgb(66, 66, 66), 0 2px 10px 0 rgb(66, 66, 66);
+}
+
+
 ul {
     list-style-type: none;
     padding-left: 0px;
     margin-left: 2px;
 }
-
+#tone-selectors{
+    margin-bottom:0px;
+    margin-left: 0px;
+}
 .filter-selector-btn {
     font-family: 'Raleway', sans-serif;
     font-size: 15px;
@@ -95,6 +103,10 @@ ul {
     padding-top: 8px;
     margin-bottom: 4px;
     background-color: white;
+}
+
+.filter-selector-btn:hover{
+    box-shadow: 0 2px 10px 0 rgb(66, 66, 66), 0 2px 10px 0 rgb(66, 66, 66);
 }
 
 #context-box {
@@ -108,7 +120,7 @@ ul {
 
 .dev-card:hover{
     background-color: rgb(255, 255, 255, 1);
-    box-shadow: 0 4px 8px 0 rgb(66, 66, 66), 0 2px 20px 0 rgb(66, 66, 66);
+    box-shadow: 0 4px 10px 0 rgb(66, 66, 66), 0 2px 20px 0 rgb(66, 66, 66);
 }
 
 .dev-img{
@@ -119,6 +131,7 @@ ul {
     height: 15vw;
     width: 100%;
     border-radius: 50%;
+    border: 16px solid white;
     /* box-shadow: 0 4px 8px 0 rgb(66, 66, 66), 0 2px 20px 0 rgb(66, 66, 66); */
 }
 
@@ -127,8 +140,9 @@ ul {
 }
 
 .social-icon{
-    padding:2px;
+    padding: 3px;
 }
+
 /* Footer */
 #footer-container {
     background-color: gray;
