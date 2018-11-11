@@ -79,88 +79,99 @@
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="line-break"></div>
+                <div class="line-break"></div>
 
-                    <div class="row">
-                        <!-- Application Input -->
-                        <div class="col-md-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title text-center"><strong>INPUT</strong></h5>
-                                    <hr>
-                                    <form>
-                                        <div class="form-group">
-                                            <textarea type="inputText" class="form-control" id="analyzeInputText"
-                                                placeholder="Enter text here."></textarea>
-                                            <small id="analyzeHelp" class="form-text text-muted">Enter the text you
-                                                want
-                                                analyzed for different tones.</small>
-                                        </div>
-                                        <button id="analyze-btn" type="submit" class="btn">
-                                            ANALYZE
-                                        </button>
-                                    </form>
+                <!-- Application -->
+                <div id="content-wrapper" class="container-fluid">
+                    <div class="container col-lg-10">
+                        <div class="row">
+                            <!-- Application Input -->
+                            <div class="col-md-4">
+                                <div id="app-input-card" class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center"><strong>INPUT</strong></h5>
+                                        <hr>
+                                        <form>
+                                            <div class="form-group">
+                                                <textarea type="inputText" class="form-control" id="analyzeInputText"
+                                                    placeholder="Enter text here." rows="11"></textarea>
+                                                <small id="analyzeHelp" class="form-text text-muted">Enter the text
+                                                    you
+                                                    want
+                                                    analyzed for different tones.</small>
+                                            </div>
+                                            <button id="analyze-btn" type="submit" class="btn">
+                                                ANALYZE
+                                            </button>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <!-- Application Result -->
-                        <div class="col-md-8">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title text-center"><strong>RESULT</strong></h5>
-                                    <hr>
-                                    <!-- Tone filter selector -->
-                                    <div class="row">
-                                        <div id="filters" class="col-sm-3 text-center">
-                                            <div id="filters-tone-list">
-                                                <ul id="tone-selectors">
+                            <!-- Application Result -->
+                            <div class="col-md-8">
+                                <div id="app-result-card" class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center"><strong>RESULT</strong></h5>
+                                        <hr>
+                                        <!-- Tone filter selector -->
+                                        <div class="row">
+                                            <div id="filters" class="col-sm-3 text-center">
+                                                <div id="filters-tone-list">
+                                                    <ul id="tone-selectors">
 
-                                                    <li>
-                                                        <h6 class="text-left">TONES</h6>
-                                                    </li>
-                                                    <hr>
-                                                    <li id="filter-analytical" class="filter-selector-btn btn">ANALYTICAL</li>
-                                                    <li id="filter-anger" class="filter-selector-btn btn ">ANGER</li>
-                                                    <li id="filter-confident" class="filter-selector-btn btn ">CONFIDENT</li>
-                                                    <li id="filter-fear" class="filter-selector-btn btn">FEAR</li>
-                                                    <li id="filter-joy" class="filter-selector-btn btn">JOY</li>
-                                                    <li id="filter-sadness" class="filter-selector-btn btn">SADNESS</li>
-                                                    <li id="filter-tentative" class="filter-selector-btn btn">TENTATIVE</li>
+                                                        <li>
+                                                            <h6 class="text-left">TONES</h6>
+                                                        </li>
+                                                        <hr>
+                                                        <li id="filter-analytical" class="filter-selector-btn btn">ANALYTICAL</li>
+                                                        <li id="filter-anger" class="filter-selector-btn btn ">ANGER</li>
+                                                        <li id="filter-confident" class="filter-selector-btn btn ">CONFIDENT</li>
+                                                        <li id="filter-fear" class="filter-selector-btn btn">FEAR</li>
+                                                        <li id="filter-joy" class="filter-selector-btn btn">JOY</li>
+                                                        <li id="filter-sadness" class="filter-selector-btn btn">SADNESS</li>
+                                                        <li id="filter-tentative" class="filter-selector-btn btn">TENTATIVE</li>
 
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <!-- Tone filter selected descriptor -->
-                                        <div class="col-sm-9">
-                                            <div id="context-box" class="card">
-                                                <div class="card-body">
-                                                    <h6 class="card-title">CONTEXT</h6>
-                                                    <hr>
-                                                    <div>
-                                                        <span id="filter-descriptor">
-                                                            The description of the selected filter will go here.
-                                                        </span>
-                                                    </div>
-
-                                                    <div class="line-break"></div>
-
-                                                    <!-- Legend for highlighted text tone strength -- Needs work -- Needs to make 3 divs, different colors, appended with tone-strength number -->
-                                                    <div id="filter-strength-legend">
-                                                        There needs to be 3 divs here created on filter selection of
-                                                        different colors appended by values displaying the strength of
-                                                        each
-                                                        tone.
-                                                    </div>
+                                                    </ul>
                                                 </div>
                                             </div>
-                                            <!-- The display of the input text -- text will highlight here according to selected tone filter -->
-                                            <div class="card">
-                                                <div class="card-body">
-                                                    <span id="analyzeInputTextResult">
-                                                        This is where the computed text will appear.
-                                                    </span>
+                                            <!-- Tone filter selected descriptor -->
+                                            <div class="col-sm-9">
+                                                <div id="context-box" class="card">
+                                                    <div class="card-body">
+                                                        <h6 class="card-title">CONTEXT</h6>
+                                                        <hr>
+                                                        <div>
+                                                            <span id="filter-descriptor">
+                                                                The description of the selected filter will go
+                                                                here.
+                                                            </span>
+                                                        </div>
+
+                                                        <div class="line-break"></div>
+
+                                                        <!-- Legend for highlighted text tone strength -- Needs work -- Needs to make 3 divs, different colors, appended with tone-strength number -->
+                                                        <div id="filter-strength-legend">
+                                                            There needs to be 3 divs here created on filter
+                                                            selection
+                                                            of
+                                                            different colors appended by values displaying the
+                                                            strength
+                                                            of
+                                                            each
+                                                            tone.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- The display of the input text -- text will highlight here according to selected tone filter -->
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <span id="analyzeInputTextResult">
+                                                            This is where the computed text will appear.
+                                                        </span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -196,7 +207,7 @@
                 <hr>
                 <div class="container text-dark">
                     <div id="copyright-container" class="container">&copy; <span class="MEUD-logo text-white">ME<span
-                             class="text-color-cham">U</span>D</span>
+                                class="text-color-cham">U</span>D</span>
                         | Made
                         during and developed for UNC Coding Bootcamp 2018-2019.</div>
                 </div>
