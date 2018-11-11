@@ -1,21 +1,21 @@
 /* Overall Styling */
 html, body {
-    margin: 0;
-    height: 100%;
-    font-family: 'Georgia', serif;
-    background: linear-gradient(140deg, white, gray, darkslategray, black);
-    background-size: cover;
-    background-repeat: no-repeat;
+  font-family: "Georgia", serif;
+  height: 100%;
+  margin: 0;
+  background: linear-gradient(140deg, white, gray, darkslategray, black);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    /* font-family: 'Julius Sans One', sans-serif; */
-    font-family: 'Raleway', sans-serif;
+  /* font-family: 'Julius Sans One', sans-serif; */
+  font-family: "Raleway", sans-serif;
 }
- 
-.line-break{
-    height: 24px;
-    width: 100%;
+
+.line-break {
+  width: 100%;
+  height: 24px;
 }
 
 /* #blackout {
@@ -26,192 +26,192 @@ h1, h2, h3, h4, h5, h6 {
 } */
 
 /* Header */
-#header-container{
-    background: linear-gradient(140deg, black, #424242 95%);
-    /* Adds shadow only to the bottom, not the sides */
-    box-shadow: 0px 1px 5px rgb(66, 66, 66);
-    border-bottom: 2px solid darkslategrey;
-    
+#header-container {
+  border-bottom: 2px solid darkslategrey;
+  background: linear-gradient(140deg, black, #424242 95%);
+
+  /* Adds shadow only to the bottom, not the sides */
+  box-shadow: 0 1px 5px rgb(66, 66, 66);
 }
 h1.MEUD-logo {
-    font-size: 3em;
+  font-size: 3em;
 }
-.MEUD-logo{
-    font-family: 'Bungee Hairline', cursive;
-    font-weight: bold;
+.MEUD-logo {
+  font-family: "Bungee Hairline", cursive;
+  font-weight: bold;
 }
-.text-color-dsg{
-    color: darkslategray;
+.text-color-dsg {
+  color: darkslategray;
 }
 /* "Champagne" text color */
-.text-color-cham{
-    color: #F5E2C8;
+.text-color-cham {
+  color: #F5E2C8;
 }
-.nav-link{
-    font-family: 'Raleway', sans-serif;
+.nav-link {
+  font-family: "Raleway", sans-serif;
 }
 
 
 #mission-link {
-    border-right: 1px solid black;
-    border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
 }
 /* Enter Page */
 
 /* Info */
 .info-container {
-    padding-top: 1em;
-    padding-bottom: 1em;
-    background-color: rgb(238, 236, 236, 0.5);
-    /* border: 1px solid rgb(238, 236, 236, 0.4);
+  padding-top: 1em;
+  padding-bottom: 1em;
+  background-color: rgb(238, 236, 236, 0.5);
+  /* border: 1px solid rgb(238, 236, 236, 0.4);
     border-radius: 4px; */
 }
 
-h3 > span.MEUD-logo{
-    font-size: 32px;
+h3 > span.MEUD-logo {
+  font-size: 32px;
 }
 /* Main application body */
-#main-content-wrapper{
-    margin-bottom: 101.5px;
+#main-content-wrapper {
+  margin-bottom: 101.5px;
 }
 
-#content-wrapper{
-    background-color: rgb(66, 66, 66, 0.33);
-    padding-top: 1em;
-    padding-bottom: 1em;
-    border-top: 0.25px solid gray;
-    border-bottom: 0.25px solid gray;
+#content-wrapper {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-top: 0.25px solid gray;
+  border-bottom: 0.25px solid gray;
+  background-color: rgb(66, 66, 66, 0.33);
 }
 
-#app-input-card{
-    height: 100%;
+#app-input-card {
+  height: 100%;
 }
-.card-title{
-    font-family: 'Raleway', sans-serif;
+.card-title {
+  font-family: "Raleway", sans-serif;
 }
 
 .card {
-    background-color: rgb(255, 255, 255, 0.7);
-    border-radius: 0%;
+  border-radius: 0;
+  background-color: rgb(255, 255, 255, 0.7);
 }
 
-#analyze-btn{
-    font-family: 'Raleway', sans-serif;
-    font-size: 15px;
-    background-color: white;
+#analyze-btn {
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  background-color: white;
 }
 
-#analyze-btn:hover{
-    background-color: #424242;
-    color: white;
-    box-shadow: 0 1px 5px 0 rgb(66, 66, 66), 0 1px 5px 0 rgb(66, 66, 66);
+#analyze-btn:hover {
+  color: white;
+  background-color: #424242;
+  box-shadow: 0 1px 5px 0 rgb(66, 66, 66), 0 1px 5px 0 rgb(66, 66, 66);
 }
 
 
 ul {
-    list-style-type: none;
-    padding-left: 0px;
-    margin-left: 2px;
+  margin-left: 2px;
+  padding-left: 0;
+  list-style-type: none;
 }
-#tone-selectors{
-    margin-bottom:0px;
-    margin-left: 0px;
+#tone-selectors {
+  margin-bottom: 0;
+  margin-left: 0;
 }
 
 /* Filter colors: */
-#filter-analytical:hover{
-    background-color: cornflowerblue;
-    color: white;
+#filter-analytical:hover {
+  color: white;
+  background-color: cornflowerblue;
 }
-#filter-anger:hover{
-    background-color: red;
-    color: white;
+#filter-anger:hover {
+  color: white;
+  background-color: red;
 }
-#filter-confident:hover{
-    background-color: purple;
-    color: white;
+#filter-confident:hover {
+  color: white;
+  background-color: purple;
 }
-#filter-fear:hover{
-    background-color: green;
-    color: white;
+#filter-fear:hover {
+  color: white;
+  background-color: green;
 }
-#filter-joy:hover{
-    background-color: gold;
-    color: white;
+#filter-joy:hover {
+  color: white;
+  background-color: gold;
 }
-#filter-sadness:hover{
-    background-color:slateblue;
-    color: white;
+#filter-sadness:hover {
+  color: white;
+  background-color: slateblue;
 }
-#filter-tentative:hover{
-    background-color:aquamarine;
-    color: white;
+#filter-tentative:hover {
+  color: white;
+  background-color: aquamarine;
 }
 
 .filter-selector-btn {
-    font-family: 'Raleway', sans-serif;
-    font-size: 15px;
-    width: 75%;
-    padding-bottom: 8px;
-    padding-top: 8px;
-    margin-bottom: 4px;
-    background-color: white;
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  width: 75%;
+  margin-bottom: 4px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: white;
 }
 
-.filter-selector-btn:hover{
-    box-shadow: 0 1px 5px 0 rgb(66, 66, 66), 0 1px 5px 0 rgb(66, 66, 66);
+.filter-selector-btn:hover {
+  box-shadow: 0 1px 5px 0 rgb(66, 66, 66), 0 1px 5px 0 rgb(66, 66, 66);
 }
 
 #context-box {
-    margin-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 /* Developer page */
-.dev-card{
-    background-color: rgb(255, 255, 255, 0.7);
+.dev-card {
+  background-color: rgb(255, 255, 255, 0.7);
 }
 
-.dev-card:hover{
-    background-color: rgb(255, 255, 255, .9);
-    border: 1px solid #EDCB96;
-    box-shadow: 0 4px 10px 0 rgb(66, 66, 66), 0 2px 20px 0 rgb(66, 66, 66);
+.dev-card:hover {
+  border: 1px solid #EDCB96;
+  background-color: rgb(255, 255, 255, 0.9);
+  box-shadow: 0 4px 10px 0 rgb(66, 66, 66), 0 2px 20px 0 rgb(66, 66, 66);
 }
 
-.dev-img{
-    position: relative;
-    align-content: center;
-    object-fit:cover;
-    /* Need help with media resizing */
-    height: 15vw;
-    width: 100%;
-    border-radius: 50%;
-    border: 12px solid #F5E2C8;
-    /* box-shadow: 0 4px 8px 0 rgb(66, 66, 66), 0 2px 20px 0 rgb(66, 66, 66); */
+.dev-img {
+  position: relative;
+  align-content: center;
+  width: 100%;
+  /* Need help with media resizing */
+  height: 13vw;
+  border: 12px solid #F5E2C8;
+  border-radius: 50%;
+  object-fit: cover;
+  /* box-shadow: 0 4px 8px 0 rgb(66, 66, 66), 0 2px 20px 0 rgb(66, 66, 66); */
 }
 
-#social-links li{
-    display: inline;
+#social-links li {
+  display: inline;
 }
 
-.social-icon{
-    padding: 3px;
+.social-icon {
+  padding: 3px;
 }
 
 /* Footer */
 #footer-container {
-    background-color: gray;
-    font-size: 12px;
+  font-size: 12px;
+  background-color: gray;
 }
-#footer-navbar{
-    padding-bottom: 0px;
+#footer-navbar {
+  padding-bottom: 0;
 }
 #footer-container > hr {
-    margin-top: 8px;
+  margin-top: 8px;
 }
-#footer-container > .container{
-    padding-bottom:16px;
+#footer-container > .container {
+  padding-bottom: 16px;
 }
 
 .footer-nav-item {
-    padding-right: 0px;
+  padding-right: 0;
 }
