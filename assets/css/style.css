@@ -79,7 +79,7 @@ h3 > span.MEUD-logo{
 }
 
 .card {
-    background-color: rgb(255, 255, 255, 0.7)
+    background-color: rgb(255, 255, 255, 0.7);
 }
 
 #analyze-btn{
@@ -155,12 +155,12 @@ ul {
 
 /* Developer page */
 .dev-card{
-    background-color: rgb(255, 255, 255, 0.7)
+    background-color: rgb(255, 255, 255, 0.7);
 }
 
 .dev-card:hover{
-    background-color: rgb(255, 255, 255, 1);
-    border: 2px solid #EDCB96;
+    background-color: rgb(255, 255, 255, .9);
+    border: 1px solid #EDCB96;
     box-shadow: 0 4px 10px 0 rgb(66, 66, 66), 0 2px 20px 0 rgb(66, 66, 66);
 }
 
