@@ -46,8 +46,9 @@ h1.MEUD-logo {
     font-family: 'Raleway', sans-serif;
 }
 
-#app-link {
+#mission-link {
     border-right: 1px solid rgb(66, 66, 66);
+    border-left: 1px solid rgb(66, 66, 66);
 }
 /* Enter Page */
 
