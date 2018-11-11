@@ -12,7 +12,7 @@ h1, h2, h3, h4, h5, h6 {
     /* font-family: 'Julius Sans One', sans-serif; */
     font-family: 'Raleway', sans-serif;
 }
-
+ 
 .line-break{
     height: 24px;
     width: 100%;
@@ -27,9 +27,10 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Header */
 #header-container{
-    background-color: gray;
+    background-color: #424242;
     /* Adds shadow only to the bottom, not the sides */
     box-shadow: 0px 1px 5px rgb(66, 66, 66);
+    border-bottom: 2px solid darkslategrey;
     
 }
 h1.MEUD-logo {
@@ -42,13 +43,18 @@ h1.MEUD-logo {
 .text-color-dsg{
     color: darkslategray;
 }
+/* "Champagne" text color */
+.text-color-cham{
+    color: #F5E2C8;
+}
 .nav-link{
     font-family: 'Raleway', sans-serif;
 }
 
+
 #mission-link {
-    border-right: 1px solid rgb(66, 66, 66);
-    border-left: 1px solid rgb(66, 66, 66);
+    border-right: 1px solid black;
+    border-left: 1px solid black;
 }
 /* Enter Page */
 
@@ -121,6 +127,7 @@ ul {
 
 .dev-card:hover{
     background-color: rgb(255, 255, 255, 1);
+    border: 2px solid #EDCB96;
     box-shadow: 0 4px 10px 0 rgb(66, 66, 66), 0 2px 20px 0 rgb(66, 66, 66);
 }
 
@@ -132,7 +139,7 @@ ul {
     height: 15vw;
     width: 100%;
     border-radius: 50%;
-    border: 16px solid white;
+    border: 12px solid #F5E2C8;
     /* box-shadow: 0 4px 8px 0 rgb(66, 66, 66), 0 2px 20px 0 rgb(66, 66, 66); */
 }
 
