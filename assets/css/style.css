@@ -1,3 +1,8 @@
+*
+{
+    box-sizing: border-box;
+}
+
 /* Overall Styling */
 html, body {
   font-family: "Georgia", serif;
