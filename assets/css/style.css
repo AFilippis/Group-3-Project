@@ -1,327 +1,332 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Overall Styling */
-html{
-    height: -100%;
+html {
+  height: -100%;
 }
 body {
-    font-family: "Georgia", serif;
-    height: -100%;
-    margin: 0;
-    background: linear-gradient(140deg, white, gray, darkslategray, black);
-    background-repeat: no-repeat;
-    background-size: cover;
+  font-family: "Georgia", serif;
+  height: -100%;
+  margin: 0;
+  background: linear-gradient(140deg, white, gray, darkslategray, black);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    /* font-family: 'Julius Sans One', sans-serif; */
-    font-family: "Raleway", sans-serif;
+  /* font-family: 'Julius Sans One', sans-serif; */
+  font-family: "Raleway", sans-serif;
 }
 
 .line-break {
-    width: 100%;
-    height: 24px;
+  width: 100%;
+  height: 24px;
 }
-
-/* #blackout {
-    height: 100%;
-    background: black;
-    background-size: cover;
-    background-repeat: no-repeat;
-} */
 
 /* Header */
 #header-container {
-    border-bottom: 2px solid darkslategrey;
-    background: linear-gradient(140deg, black, #424242 95%);
+  border-bottom: 2px solid darkslategrey;
+  background: linear-gradient(140deg, black, #424242 95%);
 
-    /* Adds shadow only to the bottom, not the sides */
-    box-shadow: 0 1px 5px rgb(66, 66, 66);
+  /* Adds shadow only to the bottom, not the sides */
+  box-shadow: 0 1px 5px rgb(66, 66, 66);
 }
 h1.MEUD-logo {
-    font-size: 3em;
+  font-size: 3em;
 }
 .MEUD-logo {
-    font-family: "Bungee Hairline", cursive;
-    font-weight: bold;
+  font-family: "Bungee Hairline", cursive;
+  font-weight: bold;
 }
 .text-color-dsg {
-    color: darkslategray;
+  color: darkslategray;
 }
 /* "Champagne" text color */
 .text-color-cham {
-    color: #F5E2C8;
+  color: #F5E2C8;
 }
 .nav-link {
-    font-family: "Raleway", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 
 #mission-link {
-    border-right: 1px solid black;
-    border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
 }
 /* Enter Page */
 
 /* Info */
 .info-container {
-    padding-top: 1em;
-    padding-bottom: 1em;
-    background-color: rgb(238, 236, 236, 0.5);
-    /* border: 1px solid rgb(238, 236, 236, 0.4);
+  padding-top: 1em;
+  padding-bottom: 1em;
+  background-color: rgb(238, 236, 236, 0.5);
+  /* border: 1px solid rgb(238, 236, 236, 0.4);
     border-radius: 4px; */
 }
 
 h3 > span.MEUD-logo {
-    font-size: 32px;
+  font-size: 32px;
 }
 /* Main application body */
 #main-content-wrapper {
-    min-height: 681px;
-    max-height: 100%;
+  min-height: 681px;
+  max-height: 100%;
 }
 
 .centered-content-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
 }
 
 #content-wrapper {
-    padding-top: 1em;
-    padding-bottom: 1em;
-    padding-right: 0;
-    padding-left: 0;
-    border-top: .3px solid gray;
-    border-bottom: .3px solid gray;
-    background-color: rgb(66, 66, 66, 0.33);
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-right: 0;
+  padding-left: 0;
+  border-top: 0.3px solid gray;
+  border-bottom: 0.3px solid gray;
+  background-color: rgb(66, 66, 66, 0.33);
 }
 
 #app-input-card {
-    height: 460.5px;
+  height: 460.5px;
 }
 .card-title {
-    font-family: "Raleway", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .card {
-    border-radius: 0;
-    background-color: rgb(255, 255, 255, 0.7);
+  border-radius: 0;
+  background-color: rgb(255, 255, 255, 0.7);
 }
 
 #analyze-btn {
-    font-family: "Raleway", sans-serif;
-    font-size: 15px;
-    background-color: white;
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  background-color: white;
 }
 
 #analyze-btn:hover {
-    color: white;
-    background-color: #424242;
-    box-shadow: 0 1px 5px 0 rgb(66, 66, 66), 0 1px 5px 0 rgb(66, 66, 66);
+  color: white;
+  background-color: #424242;
+  box-shadow: 0 1px 5px 0 rgb(66, 66, 66), 0 1px 5px 0 rgb(66, 66, 66);
 }
 
 
 ul {
-    margin-left: 2px;
-    padding-left: 0;
-    list-style-type: none;
+  margin-left: 2px;
+  padding-left: 0;
+  list-style-type: none;
 }
 #tone-selectors {
-    margin-bottom: 0;
-    margin-left: 0;
+  margin-bottom: 0;
+  margin-left: 0;
 }
 
 /* Filter colors: */
 #filter-analytical:hover {
-    color: white;
-    background-color: cornflowerblue;
+  color: white;
+  background-color: cornflowerblue;
 }
 #filter-anger:hover {
-    color: white;
-    background-color: red;
+  color: white;
+  background-color: red;
 }
 #filter-confident:hover {
-    color: white;
-    background-color: purple;
+  color: white;
+  background-color: purple;
 }
 #filter-fear:hover {
-    color: white;
-    background-color: green;
+  color: white;
+  background-color: green;
 }
 #filter-joy:hover {
-    color: white;
-    background-color: gold;
+  color: white;
+  background-color: gold;
 }
 #filter-sadness:hover {
-    color: white;
-    background-color: slateblue;
+  color: white;
+  background-color: slateblue;
 }
 #filter-tentative:hover {
-    color: white;
-    background-color: aquamarine;
+  color: white;
+  background-color: aquamarine;
 }
 
 .filter-selector-btn {
-    font-family: "Raleway", sans-serif;
-    font-size: 15px;
-    width: 75%;
-    margin-bottom: 4px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    background-color: white;
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  width: 75%;
+  margin-bottom: 4px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: white;
 }
 
 .filter-selector-btn:hover {
-    box-shadow: 0 1px 5px 0 rgb(66, 66, 66), 0 1px 5px 0 rgb(66, 66, 66);
+  box-shadow: 0 1px 5px 0 rgb(66, 66, 66), 0 1px 5px 0 rgb(66, 66, 66);
 }
 
 #context-box {
-    margin-bottom: 8px;
+  margin-bottom: 8px;
 }
 /* Context highlight colors high */
 .highlight-analytical-high {
-    color: white;
-    background-color: cornflowerblue;
+  color: white;
+  background-color: cornflowerblue;
 }
 .highlight-anger-high {
-    color: white;
-    background-color: rgb(255,0,0, 1);
+  color: white;
+  background-color: rgb(255,0,0, 1);
 }
 .highlight-confident-high {
-    color: white;
-    background-color: purple;
+  color: white;
+  background-color: purple;
 }
 .highlight-fear-high {
-    color: white;
-    background-color: green;
+  color: white;
+  background-color: green;
 }
 .highlight-joy-high {
-    color: white;
-    background-color: gold;
+  color: white;
+  background-color: gold;
 }
 .highlight-sadness-high {
-    color: white;
-    background-color: slateblue;
+  color: white;
+  background-color: slateblue;
 }
 .highlight-tentative-high {
-    color: white;
-    background-color: aquamarine;
+  color: white;
+  background-color: aquamarine;
 }
 /* Context highlight colors medium */
-.highlight-analytical-medium{
-    color: white;
-    background-color: rgb(100, 149, 237, 0.5);
-
+.highlight-analytical-medium {
+  color: white;
+  background-color: rgb(100, 149, 237, 0.5);
 }
 .highlight-anger-medium {
-    color: white;
-    background-color: rgb(255,0,0, 0.5);
+  color: white;
+  background-color: rgb(255,0,0, 0.5);
 }
 .highlight-confident-medium {
-    color: white;
-    background-color: rgb(128, 0, 128, 0.5);
+  color: white;
+  background-color: rgb(128, 0, 128, 0.5);
 }
 .highlight-fear-medium {
-    color: white;
-    background-color: rgb(0, 128, 0, 0.5);
+  color: white;
+  background-color: rgb(0, 128, 0, 0.5);
 }
 .highlight-joy-medium {
-    color: white;
-    background-color: rgb(255, 215, 0, 0.5);
+  color: white;
+  background-color: rgb(255, 215, 0, 0.5);
 }
 .highlight-sadness-medium {
-    color: white;
-    background-color: rgb(106, 90, 205, 0.5);
+  color: white;
+  background-color: rgb(106, 90, 205, 0.5);
 }
 .highlight-tentative-medium {
-    color: white;
-    background-color: rgb(127, 255, 212, 0.5);
+  color: white;
+  background-color: rgb(127, 255, 212, 0.5);
 }
 /* Context highlight colors low */
-.highlight-analytical-low{
-    color: white;
-    background-color: rgb(100, 149, 237, .3);
-
+.highlight-analytical-low {
+  color: white;
+  background-color: rgb(100, 149, 237, 0.3);
 }
 .highlight-anger-low {
-    color: white;
-    background-color: rgb(255,0,0, .3);
+  color: white;
+  background-color: rgb(255,0,0, 0.3);
 }
-.highlight-confident-low{
-    color: white;
-    background-color: rgb(128, 0, 128, .3);
+.highlight-confident-low {
+  color: white;
+  background-color: rgb(128, 0, 128, 0.3);
 }
-.highlight-fear-low{
-    color: white;
-    background-color: rgb(0, 128, 0, .3);
+.highlight-fear-low {
+  color: white;
+  background-color: rgb(0, 128, 0, 0.3);
 }
-.highlight-joy-low{
-    color: white;
-    background-color: rgb(255, 215, 0, .3);
+.highlight-joy-low {
+  color: white;
+  background-color: rgb(255, 215, 0, 0.3);
 }
 .highlight-sadness-low {
-    color: white;
-    background-color: rgb(106, 90, 205, .3);
+  color: white;
+  background-color: rgb(106, 90, 205, 0.3);
 }
 .highlight-tentative-low {
-    color: white;
-    background-color: rgb(127, 255, 212, .3);
+  color: white;
+  background-color: rgb(127, 255, 212, 0.3);
 }
 
 /* Developer page */
 .dev-card {
-    background-color: rgb(255, 255, 255, 0.7);
+  background-color: rgb(255, 255, 255, 0.7);
 }
 
 .dev-card:hover {
-    border: 1px solid #EDCB96;
-    background-color: rgb(255, 255, 255, 0.9);
-    box-shadow: 0 4px 10px 0 rgb(66, 66, 66), 0 2px 20px 0 rgb(66, 66, 66);
+  border: 1px solid #EDCB96;
+  background-color: rgb(255, 255, 255, 0.9);
+  box-shadow: 0 4px 10px 0 rgb(66, 66, 66), 0 2px 20px 0 rgb(66, 66, 66);
 }
 
+
 .dev-img {
-    position: relative;
-    align-content: center;
-    width: 100%;
-    /* Need help with media resizing */
-    height: 14vw;
-    border: 12px solid #F5E2C8;
-    border-radius: 50%;
-    object-fit: cover;
-    /* box-shadow: 0 4px 8px 0 rgb(66, 66, 66), 0 2px 20px 0 rgb(66, 66, 66); */
+  position: relative;
+  align-content: center;
+  /* Need help with media resizing */
+  height: 100%;
+  width: 100%;
+  border: 12px solid #F5E2C8;
+  border-radius: 50%;
+  object-fit: cover;
+  /* box-shadow: 0 4px 8px 0 rgb(66, 66, 66), 0 2px 20px 0 rgb(66, 66, 66); */
 }
 
 #social-links li {
-    display: inline;
+  display: inline;
 }
 
 .social-icon {
-    padding: 3px;
+  padding: 3px;
 }
 
 /* Footer */
 #footer-container {
-    position: relative;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    font-size: 12px;
-    background-color: gray;
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-size: 12px;
+  background-color: gray;
 }
 #footer-navbar {
-    padding-bottom: 0;
+  padding-bottom: 0;
 }
 #footer-container > hr {
-    margin-top: 8px;
+  margin-top: 8px;
 }
 #footer-container > .container {
-    padding-bottom: 16px;
+  padding-bottom: 16px;
 }
 
 .footer-nav-item {
-    padding-right: 0;
+  padding-right: 0;
+}
+
+/* Media responsiveness */
+@media only screen and (max-width: 980px) {
+  /* Stuff here, reg css */
+}
+
+@media only screen and (max-width: 768px) {
+  /* Stuff here, reg css */
+}
+
+@media only screen and (max-width: 640px) {
+  /* Stuff here, reg css */
 }
