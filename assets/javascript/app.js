@@ -21,13 +21,15 @@ var textAnalysisSettings = {
 // });
 
 document.addEventListener("click", (event) => {
-  event.preventDefault();
+  
   if(event.target === analyzeButton)
   {
+    event.preventDefault();
     analyzeApi(analyzeText.value);
   }
   if(emotionButtonArray.includes(event.target))
   {
+    event.preventDefault();
     changeEmotionHighlight(event.target.id.replace("filter-", ""));
   }
 });
@@ -54,41 +56,77 @@ function createFullTextHTML(response)
 {
   let sentenceHolder = document.createElement("div");
   sentenceHolder.id = "emotion-id";
-  response.sentences_tone.forEach((element) => 
+  console.log(response);
+  if(response.sentences_tone !== undefined)
   {
-    let newSpan = document.createElement("p");
-    newSpan.innerHTML = element.text;
-
-    if(element.tones.length !== 0)
+    response.sentences_tone.forEach((element) => 
     {
-      element.tones.forEach((innerElement) => 
+      let newSpan = document.createElement("p");
+      newSpan.innerHTML = element.text + "\n";
+  
+      if(element.tones.length !== 0)
       {
-        newSpan.dataset[innerElement.tone_name.toLowerCase()] = innerElement.score;
-      });
-    }
+        element.tones.forEach((innerElement) => 
+        {
+          newSpan.dataset[innerElement.tone_name.toLowerCase()] = innerElement.score;
+        });
+      }
+  
+      newSpan.dataset.sentence_id = element.sentence_id;
+      newSpan.classList = "emotion-p";
+      sentenceHolder.appendChild(newSpan);
+    });
+  }
+  else if(response.document_tone !== undefined)
+  {
+    //single sentence doesnt return sentence so regrab info from textarea
+      let newSpan = document.createElement("p");
+      newSpan.innerHTML = analyzeText.value + "\n";
+  
+      if(response.document_tone.tones.length !== 0)
+      {
+        response.document_tone.tones.forEach((innerElement) => 
+        {
+          newSpan.dataset[innerElement.tone_name.toLowerCase()] = innerElement.score;
+        });
+      }
+  
+      newSpan.classList = "emotion-p";
+      sentenceHolder.appendChild(newSpan);
+  }
 
-    newSpan.dataset.sentence_id = element.sentence_id;
-    newSpan.classList = "emotion-p";
-    sentenceHolder.appendChild(newSpan);
-  })
-
+  textResult.innerHTML = "";
   textResult.appendChild(sentenceHolder);
 }
 
 function changeEmotionHighlight(emotion)
 {
-  let test = document.querySelectorAll("[data-"+emotion+"]");
-  let testDiv = document.querySelectorAll("#emotion-id p");
+  let emotionDivs = document.querySelectorAll("[data-"+emotion+"]");
+  let allEmotionDivs = document.querySelectorAll("#emotion-id p");
 
-  testDiv.forEach((element) => 
+  allEmotionDivs.forEach((element) => 
   {
     element.classList = "emotion-p";
   });
 
-  test.forEach((element) => 
+  emotionDivs.forEach((element) => 
   {
     
-    element.classList = "emotion-p highlight-" + emotion;
+    if(parseFloat(element.dataset[emotion]) < .5)
+    {
+      element.classList = "emotion-p highlight-" + emotion + "-low";
+      console.log(element.dataset[emotion]);
+    }
+    else if(parseFloat(element.dataset[emotion]) < .75)
+    {
+      element.classList = "emotion-p highlight-" + emotion + "-medium";
+      console.log(element.dataset[emotion]);
+    }
+    else
+    {
+      element.classList = "emotion-p highlight-" + emotion + "-high";
+      console.log(element.dataset[emotion]);
+    }
   });
 
 }
