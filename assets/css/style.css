@@ -270,9 +270,13 @@ ul {
 
 /* Developer page */
 #content-wrapper-devs {
-    padding: 1em 3em 1em 3em;
-    border: 0.3px solid gray;
-    background-color: rgb(66, 66, 66, 0.33);
+    padding-top: 3em;
+  padding-bottom: 3em;
+  padding-right: 0;
+  padding-left: 0;
+  border-top: 0.3px solid gray;
+  border-bottom: 0.3px solid gray;
+  background-color: rgb(66, 66, 66, 0.33);
 }
 
 .dev-card {
