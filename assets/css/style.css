@@ -10,7 +10,7 @@ body {
   font-family: "Georgia", serif;
   height: -100%;
   margin: 0;
-  background: linear-gradient(140deg, white, #4b4b4b, darkslategray, black);
+  background: linear-gradient(140deg, white, #4B4B4B, darkslategray, black);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -72,7 +72,7 @@ h3 > span.MEUD-logo {
 }
 /* Main application body */
 #main-content-wrapper {
-  min-height: 681px;
+  min-height: 649px;
   max-height: 100%;
 }
 
@@ -94,7 +94,7 @@ h3 > span.MEUD-logo {
 }
 
 #app-input-card {
-  height: 460.5px;
+  height: 462.5px;
 }
 .card-title {
   font-family: "Raleway", sans-serif;
@@ -264,13 +264,13 @@ ul {
 }
 
 /* Mission page  */
-#mission-statement-container{
-    padding: 2em;
+#mission-statement-container {
+  padding: 2em;
 }
 
 /* Developer page */
 #content-wrapper-devs {
-    padding-top: 3em;
+  padding-top: 3em;
   padding-bottom: 3em;
   padding-right: 0;
   padding-left: 0;
@@ -319,7 +319,7 @@ ul {
   bottom: 0;
   left: 0;
   font-size: 12px;
-  background-color: #4b4b4b;
+  background-color: #4B4B4B;
 }
 #footer-navbar {
   padding-bottom: 0;
