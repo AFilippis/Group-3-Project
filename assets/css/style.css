@@ -263,7 +263,21 @@ ul {
   background-color: rgb(127, 255, 212, 0.3);
 }
 
+/* Mission page  */
+#mission-statement-container{
+    padding: 2em;
+}
+
 /* Developer page */
+#content-wrapper-devs {
+    padding-top: 3em;
+    padding-bottom: 3em;
+    padding-right: 0;
+    padding-left: 0;
+    border: 0.3px solid gray;
+    background-color: rgb(66, 66, 66, 0.33);
+}
+
 .dev-card {
   background-color: rgb(255, 255, 255, 0.7);
 }
@@ -293,6 +307,8 @@ ul {
 
 .social-icon {
   padding: 3px;
+  height: 10%;
+  width: 20%;
 }
 
 /* Footer */
