@@ -10,7 +10,7 @@ body {
   font-family: "Georgia", serif;
   height: -100%;
   margin: 0;
-  background: linear-gradient(140deg, white, gray, darkslategray, black);
+  background: linear-gradient(140deg, white, #4b4b4b, darkslategray, black);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -270,10 +270,7 @@ ul {
 
 /* Developer page */
 #content-wrapper-devs {
-    padding-top: 3em;
-    padding-bottom: 3em;
-    padding-right: 0;
-    padding-left: 0;
+    padding: 1em 3em 1em 3em;
     border: 0.3px solid gray;
     background-color: rgb(66, 66, 66, 0.33);
 }
@@ -295,7 +292,7 @@ ul {
   /* Need help with media resizing */
   height: 100%;
   width: 100%;
-  border: 12px solid #F5E2C8;
+  border: 6px solid #F5E2C8;
   border-radius: 50%;
   object-fit: cover;
   /* box-shadow: 0 4px 8px 0 rgb(66, 66, 66), 0 2px 20px 0 rgb(66, 66, 66); */
@@ -318,7 +315,7 @@ ul {
   bottom: 0;
   left: 0;
   font-size: 12px;
-  background-color: gray;
+  background-color: #4b4b4b;
 }
 #footer-navbar {
   padding-bottom: 0;
