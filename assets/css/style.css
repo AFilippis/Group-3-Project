@@ -3,7 +3,10 @@
 }
 
 /* Overall Styling */
-html, body {
+html{
+    height: -100%;
+}
+body {
     font-family: "Georgia", serif;
     height: -100%;
     margin: 0;
@@ -76,14 +79,24 @@ h3 > span.MEUD-logo {
 }
 /* Main application body */
 #main-content-wrapper {
-    margin-bottom: 101.5px;
+    min-height: 681px;
+    max-height: 100%;
+}
+
+.centered-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
 }
 
 #content-wrapper {
     padding-top: 1em;
     padding-bottom: 1em;
-    border-top: 0.25px solid gray;
-    border-bottom: 0.25px solid gray;
+    padding-right: 0;
+    padding-left: 0;
+    border-top: .3px solid gray;
+    border-bottom: .3px solid gray;
     background-color: rgb(66, 66, 66, 0.33);
 }
 
@@ -169,28 +182,96 @@ ul {
 #context-box {
     margin-bottom: 8px;
 }
-/* Context highlight colors */
-.highlight-analytical {
+/* Context highlight colors high */
+.highlight-analytical-high {
+    color: white;
     background-color: cornflowerblue;
 }
-.highlight-anger {
-    background-color: red;
+.highlight-anger-high {
+    color: white;
+    background-color: rgb(255,0,0, 1);
 }
-.highlight-confident {
+.highlight-confident-high {
+    color: white;
     background-color: purple;
 }
-.highlight-fear {
+.highlight-fear-high {
+    color: white;
     background-color: green;
 }
-.highlight-joy {
+.highlight-joy-high {
+    color: white;
     background-color: gold;
 }
-.highlight-sadness {
+.highlight-sadness-high {
+    color: white;
     background-color: slateblue;
 }
-.highlight-tentative {
+.highlight-tentative-high {
+    color: white;
     background-color: aquamarine;
 }
+/* Context highlight colors medium */
+.highlight-analytical-medium{
+    color: white;
+    background-color: rgb(100, 149, 237, 0.5);
+
+}
+.highlight-anger-medium {
+    color: white;
+    background-color: rgb(255,0,0, 0.5);
+}
+.highlight-confident-medium {
+    color: white;
+    background-color: rgb(128, 0, 128, 0.5);
+}
+.highlight-fear-medium {
+    color: white;
+    background-color: rgb(0, 128, 0, 0.5);
+}
+.highlight-joy-medium {
+    color: white;
+    background-color: rgb(255, 215, 0, 0.5);
+}
+.highlight-sadness-medium {
+    color: white;
+    background-color: rgb(106, 90, 205, 0.5);
+}
+.highlight-tentative-medium {
+    color: white;
+    background-color: rgb(127, 255, 212, 0.5);
+}
+/* Context highlight colors low */
+.highlight-analytical-low{
+    color: white;
+    background-color: rgb(100, 149, 237, .3);
+
+}
+.highlight-anger-low {
+    color: white;
+    background-color: rgb(255,0,0, .3);
+}
+.highlight-confident-low{
+    color: white;
+    background-color: rgb(128, 0, 128, .3);
+}
+.highlight-fear-low{
+    color: white;
+    background-color: rgb(0, 128, 0, .3);
+}
+.highlight-joy-low{
+    color: white;
+    background-color: rgb(255, 215, 0, .3);
+}
+.highlight-sadness-low {
+    color: white;
+    background-color: rgb(106, 90, 205, .3);
+}
+.highlight-tentative-low {
+    color: white;
+    background-color: rgb(127, 255, 212, .3);
+}
+
 /* Developer page */
 .dev-card {
     background-color: rgb(255, 255, 255, 0.7);
@@ -207,7 +288,7 @@ ul {
     align-content: center;
     width: 100%;
     /* Need help with media resizing */
-    height: 13vw;
+    height: 14vw;
     border: 12px solid #F5E2C8;
     border-radius: 50%;
     object-fit: cover;
