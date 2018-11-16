@@ -49,7 +49,7 @@
     <!-- Main Content -->
     <main>
         <div id="main-content-wrapper">
-            <div class="container col-lg-11">
+            <div class="container col-lg-11 col-md-12 col-sm-12">
                 <!-- Initial info - what it does -->
                 <div class="info-container container-fluid">
                     <div class="row">
@@ -73,10 +73,10 @@
 
             <!-- Application -->
             <div id="content-wrapper" class="container-fluid">
-                <div class="container col-lg-10">
+                <div class="container col-lg-10 col-md-12 col-sm-12">
                     <div class="row">
                         <!-- Application Input -->
-                        <div class="col-md-4">
+                        <div class="col-lg-4 col-md-4 col-sm-12">
                             <div id="app-input-card" class="card">
                                 <div class="card-body">
                                     <h5 class="card-title text-center"><strong>INPUT</strong></h5>
@@ -98,9 +98,8 @@
                                     </form>
                                     <small id="audio-help" class="text-muted">OR you can convert an audio file to text
                                         to analyze.</small>
-                                    <form action="http://meud-audio.s3.amazonaws.com/" method="post" enctype="multipart/form-data">
-                                        <input type="hidden" value="" id="file-name" name="key">
-                                        <input type="file" name="file">
+                                    <form>
+                                        <input id="audio-file-input" type="file" name="file">
                                         <div class="line-break"></div>
                                         <button id="audio-upload-btn" class="btn">SUBMIT AUDIO</button>
                                     </form>
@@ -108,15 +107,17 @@
                             </div>
                         </div>
 
+                        <div id="media-query-break"></div>
+
                         <!-- Application Result -->
-                        <div class="container col-md-8">
+                        <div class="container col-lg-8 col-md-8 col-sm-12">
                             <div id="app-result-card" class="card">
                                 <div class="card-body">
                                     <h5 class="card-title text-center"><strong>RESULT</strong></h5>
                                     <hr>
                                     <!-- Tone filter selector -->
                                     <div class="row">
-                                        <div id="filters" class="col-sm-3 text-center">
+                                        <div id="filters" class="col-lg-3 col-md-3 col-sm-3 text-center">
                                             <div id="filters-tone-list">
                                                 <ul id="tone-selectors">
 
@@ -124,19 +125,36 @@
                                                         <h6 class="text-left">TONES</h6>
                                                     </li>
                                                     <hr>
-                                                    <li id="filter-analytical" class="filter-selector-btn btn">ANALYTICAL</li>
-                                                    <li id="filter-anger" class="filter-selector-btn btn ">ANGER</li>
-                                                    <li id="filter-confident" class="filter-selector-btn btn ">CONFIDENT</li>
-                                                    <li id="filter-fear" class="filter-selector-btn btn">FEAR</li>
-                                                    <li id="filter-joy" class="filter-selector-btn btn">JOY</li>
-                                                    <li id="filter-sadness" class="filter-selector-btn btn">SADNESS</li>
-                                                    <li id="filter-tentative" class="filter-selector-btn btn">TENTATIVE</li>
+                                                    <li>
+                                                        <button id="filter-analytical" class="filter-selector-btn btn"
+                                                            type="button">ANALYTICAL</button></li>
+                                                    <li>
+                                                        <button id="filter-anger" class="filter-selector-btn btn" type="button">ANGER</button>
+                                                    </li>
+                                                    <li>
+                                                        <button id="filter-confident" class="filter-selector-btn btn"
+                                                            type="button">CONFIDENT</button>
+                                                    </li>
+                                                    <li>
+                                                        <button id="filter-fear" class="filter-selector-btn btn" type="button">FEAR</button>
+                                                    </li>
+                                                    <li>
+                                                        <button id="filter-joy" class="filter-selector-btn btn" type="button">JOY</button>
+                                                    </li>
+                                                    <li>
+                                                        <button id="filter-sadness" class="filter-selector-btn btn"
+                                                            type="button">SADNESS</button>
+                                                    </li>
+                                                    <li>
+                                                        <button id="filter-tentative" class="filter-selector-btn btn"
+                                                            type="button">TENTATIVE</button>
+                                                    </li>
 
                                                 </ul>
                                             </div>
                                         </div>
                                         <!-- Tone filter selected descriptor -->
-                                        <div class="col-sm-9">
+                                        <div class="col-lg-9 col-md-9 col-sm-9">
                                             <div id="context-box" class="card">
                                                 <div class="card-body">
                                                     <h6 class="card-title">CONTEXT</h6>
@@ -208,6 +226,7 @@
     <!-- Scripts -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/javascript/app.js"></script>
+    <script type="text/javascript" src="assets/javascript/styling.js"></script>
 </body>
 
 </html>

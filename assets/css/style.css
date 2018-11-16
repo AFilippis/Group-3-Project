@@ -72,7 +72,7 @@ h3 > span.MEUD-logo {
 }
 /* Main application body */
 #main-content-wrapper {
-  min-height: 649px;
+  min-height: 686px;
   max-height: 100%;
 }
 
@@ -169,12 +169,12 @@ ul {
 
 .filter-selector-btn {
   font-family: "Raleway", sans-serif;
-  font-size: 15px;
-  width: 75%;
+  width: 80%;
   margin-bottom: 4px;
   padding-top: 8px;
   padding-bottom: 8px;
   background-color: white;
+  box-sizing: content-box;
 }
 
 .filter-selector-btn:hover {
