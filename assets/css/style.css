@@ -94,7 +94,7 @@ h3 > span.MEUD-logo {
 }
 
 #app-input-card {
-  height: 462.5px;
+  height: 612.5px;
 }
 .card-title {
   font-family: "Raleway", sans-serif;
@@ -112,6 +112,18 @@ h3 > span.MEUD-logo {
 }
 
 #analyze-btn:hover {
+  color: white;
+  background-color: #424242;
+  box-shadow: 0 1px 5px 0 rgb(66, 66, 66), 0 1px 5px 0 rgb(66, 66, 66);
+}
+
+#audio-upload-btn{
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  background-color: white;
+}
+
+#audio-upload-btn:hover{
   color: white;
   background-color: #424242;
   box-shadow: 0 1px 5px 0 rgb(66, 66, 66), 0 1px 5px 0 rgb(66, 66, 66);

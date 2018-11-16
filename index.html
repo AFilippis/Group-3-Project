@@ -105,6 +105,16 @@
                                             <button id="analyze-btn" type="submit" class="btn">
                                                 ANALYZE
                                             </button>
+                                            
+                                            <hr>
+                                            <small id="audio-help" class="text-muted">OR you can convert an audio file to text to analyze.</small>
+                                            <div class="line-break"></div>
+                                            <form action="http://meud-audio.s3.amazonaws.com/" method="post" enctype="multipart/form-data">
+                                                <input type="hidden" value="" id="file-name" name="key">
+                                                <input type="file" name="file">
+                                                <div class="line-break"></div>
+                                                <button id="audio-upload-btn" class="btn">SUBMIT AUDIO</button>
+                                            </form>
                                         </form>
                                     </div>
                                 </div>
