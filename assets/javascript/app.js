@@ -2,8 +2,13 @@ const analyzeButton = document.querySelector("#analyze-btn");
 const analyzeText = document.querySelector("#analyzeInputText");
 const textResult = document.querySelector("#analyzeInputTextResult");
 const emotionButtonArray = Array.from(document.querySelectorAll(".filter-selector-btn"));
+const randomGeneratedFile = "mued-upload-" + parseInt(Date.now() * Math.random()) +".mp3";
+const bucketUrl = "https://meud-audio.s3.amazonaws.com/" + randomGeneratedFile;
+const uploadButton = document.querySelector("#file-name");
 
-var textAnalysisSettings = {
+
+
+const textAnalysisSettings = {
   "async": true,
   "crossDomain": true,
   "url": "https://gateway-wdc.watsonplatform.net/tone-analyzer/api/v3/tone?version=2017-09-21",
@@ -15,16 +20,45 @@ var textAnalysisSettings = {
     "postman-token": "47c4bebe-6bad-541a-ee5f-fe396c649413"
   }
 }
+const audioPost = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://api.assemblyai.com/transcript",
+  "method": "POST",
+  "headers": {
+    "authorization": "5fda6a4e547e45ca8bd01dbc71afec04",
+    "cache-control": "no-cache",
+    "postman-token": "2b11a974-5004-3882-4d14-21c0d92ca94a"
+  }
+}
+const audioGetText = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://api.assemblyai.com/transcript/${id}",
+  "method": "GET",
+  "headers": {
+    "authorization": "5fda6a4e547e45ca8bd01dbc71afec04",
+    "cache-control": "no-cache",
+    "postman-token": "df1d1e7e-b8d9-d746-682e-c3bc38b7ad5f"
+  }
+}
 
-// $.ajax(settings).done(function (response) {
-//   console.log(response);
-// });
+
+//set unique document name
+document.querySelector("#file-name").value = randomGeneratedFile;
+
+
+//postTextToSpeech();
+//add flag to check if file has been uploaded before trying
+//also check to make sure file is uploaded before sending to the assemblyai
+//put text into text area so that user can modify the text
+
 
 document.addEventListener("click", (event) => {
-  
   if(event.target === analyzeButton)
   {
     event.preventDefault();
+    //TODO THIS SHOULDNT GO THROUGH AUDIO - TEXT
     analyzeApi(analyzeText.value);
   }
   if(emotionButtonArray.includes(event.target))
@@ -41,15 +75,40 @@ function analyzeApi(text)
   //call a functioin that shows data
   textAnalysisSettings.data = JSON.stringify({"text" : text});
 
-  $.ajax(textAnalysisSettings).done(analysisCallback);
-
+  $.ajax(textAnalysisSettings).done(createFullTextHTML);
 
 }
 
-function analysisCallback(response)
+function postTextToSpeech()
 {
-  createFullTextHTML(response);
+  //Normally this will upload to aws
+  //then check for when it is uploaded
+  //then post text to speech to assembly ai
+  audioPost.data = JSON.stringify({"audio_src_url" : bucketUrl}) 
 
+  $.ajax(audioPost).done(response => {
+    let intervalId = setInterval(() => {
+      checkForText(response.transcript.id, intervalId);
+    }, 3000);
+  });
+
+}
+
+function checkForText(textId, intervalId)
+{
+  audioGetText.url = audioGetText.url.replace("${id}", textId);
+
+  $.ajax(audioGetText).done(function (response) {
+
+    if(response.transcript.status === "completed")
+    {
+      //logic and clear
+      console.log(response);
+      clearInterval(intervalId);
+      analyzeApi(response.transcript.text);
+    }
+    
+  });
 }
 
 function createFullTextHTML(response)
@@ -130,87 +189,3 @@ function changeEmotionHighlight(emotion)
   });
 
 }
-// function createTextObjectArr(response)
-// {
-//   let textArr = [];
-//   response.sentences_tone.forEach((element) => {
-//     textArr.push(element);
-//   })
-
-//   console.log(textArr);
-// }
-
-
-
-//This post a json string to get the tones back
-//  url : https://gateway-wdc.watsonplatform.net/tone-analyzer/api/v3/tone?version=2017-09-21
-// data : {"text" : "text to send"}
-// Need to stirngify text to send correctly
-// on return gives object with information needed
-
-// var settings = {
-//   "async": true,
-//   "crossDomain": true,
-//   "url": "https://gateway-wdc.watsonplatform.net/tone-analyzer/api/v3/tone?version=2017-09-21",
-//   "method": "POST",
-//   "headers": {
-//     "content-type": "application/json",
-//     "authorization": "Basic YXBpa2V5OlpMaWN1Sk41Ujg0R0pJcWhrUnpGZEd0emlhRWw5eUJ0SEZMWE04ZVc4dWhj",
-//     "cache-control": "no-cache",
-//     "postman-token": "47c4bebe-6bad-541a-ee5f-fe396c649413"
-//   },
-//   "data": JSON.stringify({
-//     "text": "Team, I know that times are tough! Product sales have been disappointing for the past three quarters. We have a competitive product, but we need to do a better job of selling it!"
-//   })
-// }
-
-// $.ajax(settings).done(function (response) {
-//   console.log(response);
-// });
-
-
-//This post the audio file to the api
-// url  : https://api.assemblyai.com/transcript
-// data : {"audio_src_url" : "audio url"}
-// need to JSON stringify data to send correctly
-// on done returns object with id for get method
-
-// var settings = {
-//   "async": true,
-//   "crossDomain": true,
-//   "url": "https://api.assemblyai.com/transcript",
-//   "method": "POST",
-//   "headers": {
-//     "authorization": "5fda6a4e547e45ca8bd01dbc71afec04",
-//     "cache-control": "no-cache",
-//     "postman-token": "2b11a974-5004-3882-4d14-21c0d92ca94a"
-//   },
-//   "data" :  JSON.stringify("audio_src_url" : "https://s3-us-west-2.amazonaws.com/blog.assemblyai.com/audio/8-7-2018-post/7510.mp3");
-// }
-
-// $.ajax(settings).done(function (response) {
-//   console.log(response);
-// });
-
-//Working get method for assemblyai
-// url : https://api.assemblyai.com/transcript/${queryId}
-// Gets by the id of the data returned with the post data
-// Note it takes about half as long as the audio file to return successfully
-// It will returned queued until it is successfullt transcribed 
-// Set interval timer to test every 5 seconds?
-
-// var settings = {
-//   "async": true,
-//   "crossDomain": true,
-//   "url": "https://api.assemblyai.com/transcript/${id}",
-//   "method": "GET",
-//   "headers": {
-//     "authorization": "5fda6a4e547e45ca8bd01dbc71afec04",
-//     "cache-control": "no-cache",
-//     "postman-token": "df1d1e7e-b8d9-d746-682e-c3bc38b7ad5f"
-//   }
-// }
-
-// $.ajax(settings).done(function (response) {
-//   console.log(response);
-// });
