@@ -1,14 +1,16 @@
-*
-{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
 /* Overall Styling */
-html, body {
+html {
+  height: -100%;
+}
+body {
   font-family: "Georgia", serif;
-  height: 100%;
+  height: -100%;
   margin: 0;
-  background: linear-gradient(140deg, white, gray, darkslategray, black);
+  background: linear-gradient(140deg, white, #4B4B4B, darkslategray, black);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -22,13 +24,6 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 24px;
 }
-
-/* #blackout {
-    height: 100%;
-    background: black;
-    background-size: cover;
-    background-repeat: no-repeat;
-} */
 
 /* Header */
 #header-container {
@@ -77,19 +72,29 @@ h3 > span.MEUD-logo {
 }
 /* Main application body */
 #main-content-wrapper {
-  margin-bottom: 101.5px;
+  min-height: 649px;
+  max-height: 100%;
+}
+
+.centered-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
 }
 
 #content-wrapper {
   padding-top: 1em;
   padding-bottom: 1em;
-  border-top: 0.25px solid gray;
-  border-bottom: 0.25px solid gray;
+  padding-right: 0;
+  padding-left: 0;
+  border-top: 0.3px solid gray;
+  border-bottom: 0.3px solid gray;
   background-color: rgb(66, 66, 66, 0.33);
 }
 
 #app-input-card {
-  height: 100%;
+  height: 612.5px;
 }
 .card-title {
   font-family: "Raleway", sans-serif;
@@ -107,6 +112,18 @@ h3 > span.MEUD-logo {
 }
 
 #analyze-btn:hover {
+  color: white;
+  background-color: #424242;
+  box-shadow: 0 1px 5px 0 rgb(66, 66, 66), 0 1px 5px 0 rgb(66, 66, 66);
+}
+
+#audio-upload-btn{
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  background-color: white;
+}
+
+#audio-upload-btn:hover{
   color: white;
   background-color: #424242;
   box-shadow: 0 1px 5px 0 rgb(66, 66, 66), 0 1px 5px 0 rgb(66, 66, 66);
@@ -170,8 +187,110 @@ ul {
 #context-box {
   margin-bottom: 8px;
 }
+/* Context highlight colors high */
+.highlight-analytical-high {
+  color: white;
+  background-color: cornflowerblue;
+}
+.highlight-anger-high {
+  color: white;
+  background-color: rgb(255,0,0, 1);
+}
+.highlight-confident-high {
+  color: white;
+  background-color: purple;
+}
+.highlight-fear-high {
+  color: white;
+  background-color: green;
+}
+.highlight-joy-high {
+  color: white;
+  background-color: gold;
+}
+.highlight-sadness-high {
+  color: white;
+  background-color: slateblue;
+}
+.highlight-tentative-high {
+  color: white;
+  background-color: aquamarine;
+}
+/* Context highlight colors medium */
+.highlight-analytical-medium {
+  color: white;
+  background-color: rgb(100, 149, 237, 0.5);
+}
+.highlight-anger-medium {
+  color: white;
+  background-color: rgb(255,0,0, 0.5);
+}
+.highlight-confident-medium {
+  color: white;
+  background-color: rgb(128, 0, 128, 0.5);
+}
+.highlight-fear-medium {
+  color: white;
+  background-color: rgb(0, 128, 0, 0.5);
+}
+.highlight-joy-medium {
+  color: white;
+  background-color: rgb(255, 215, 0, 0.5);
+}
+.highlight-sadness-medium {
+  color: white;
+  background-color: rgb(106, 90, 205, 0.5);
+}
+.highlight-tentative-medium {
+  color: white;
+  background-color: rgb(127, 255, 212, 0.5);
+}
+/* Context highlight colors low */
+.highlight-analytical-low {
+  color: white;
+  background-color: rgb(100, 149, 237, 0.3);
+}
+.highlight-anger-low {
+  color: white;
+  background-color: rgb(255,0,0, 0.3);
+}
+.highlight-confident-low {
+  color: white;
+  background-color: rgb(128, 0, 128, 0.3);
+}
+.highlight-fear-low {
+  color: white;
+  background-color: rgb(0, 128, 0, 0.3);
+}
+.highlight-joy-low {
+  color: white;
+  background-color: rgb(255, 215, 0, 0.3);
+}
+.highlight-sadness-low {
+  color: white;
+  background-color: rgb(106, 90, 205, 0.3);
+}
+.highlight-tentative-low {
+  color: white;
+  background-color: rgb(127, 255, 212, 0.3);
+}
+
+/* Mission page  */
+#mission-statement-container {
+  padding: 2em;
+}
 
 /* Developer page */
+#content-wrapper-devs {
+  padding-top: 3em;
+  padding-bottom: 3em;
+  padding-right: 0;
+  padding-left: 0;
+  border-top: 0.3px solid gray;
+  border-bottom: 0.3px solid gray;
+  background-color: rgb(66, 66, 66, 0.33);
+}
+
 .dev-card {
   background-color: rgb(255, 255, 255, 0.7);
 }
@@ -182,13 +301,14 @@ ul {
   box-shadow: 0 4px 10px 0 rgb(66, 66, 66), 0 2px 20px 0 rgb(66, 66, 66);
 }
 
+
 .dev-img {
   position: relative;
   align-content: center;
-  width: 100%;
   /* Need help with media resizing */
-  height: 13vw;
-  border: 12px solid #F5E2C8;
+  height: 100%;
+  width: 100%;
+  border: 6px solid #F5E2C8;
   border-radius: 50%;
   object-fit: cover;
   /* box-shadow: 0 4px 8px 0 rgb(66, 66, 66), 0 2px 20px 0 rgb(66, 66, 66); */
@@ -200,12 +320,18 @@ ul {
 
 .social-icon {
   padding: 3px;
+  height: 10%;
+  width: 20%;
 }
 
 /* Footer */
 #footer-container {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
   font-size: 12px;
-  background-color: gray;
+  background-color: #4B4B4B;
 }
 #footer-navbar {
   padding-bottom: 0;
@@ -219,4 +345,17 @@ ul {
 
 .footer-nav-item {
   padding-right: 0;
+}
+
+/* Media responsiveness */
+@media only screen and (max-width: 980px) {
+  /* Stuff here, reg css */
+}
+
+@media only screen and (max-width: 768px) {
+  /* Stuff here, reg css */
+}
+
+@media only screen and (max-width: 640px) {
+  /* Stuff here, reg css */
 }
