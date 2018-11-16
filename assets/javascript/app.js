@@ -6,6 +6,9 @@ const randomGeneratedFile = "mued-upload-" + parseInt(Date.now() * Math.random()
 const bucketUrl = "https://meud-audio.s3.amazonaws.com/" + randomGeneratedFile;
 const uploadButton = document.querySelector("#audio-upload-btn");
 const audioFileInput = document.querySelector("#audio-file-input");
+const loader = document.getElementById("loader");
+
+
 
 
 var awsSend = {
@@ -21,6 +24,12 @@ var awsSend = {
   "processData": false,
   "contentType": false,
   "mimeType": "multipart/form-data",
+  "beforeSend" : function() {
+    loader.classList.remove("d-none");
+  },
+  "success" : function() {
+    loader.classList.add("d-none");
+  }
 }
 
 
@@ -36,6 +45,12 @@ const textAnalysisSettings = {
     "authorization": "Basic YXBpa2V5OlpMaWN1Sk41Ujg0R0pJcWhrUnpGZEd0emlhRWw5eUJ0SEZMWE04ZVc4dWhj",
     "cache-control": "no-cache",
     "postman-token": "47c4bebe-6bad-541a-ee5f-fe396c649413"
+  },
+  "beforeSend" : function() {
+    loader.classList.remove("d-none");
+  },
+  "success" : function() {
+    loader.classList.add("d-none");
   }
 }
 const audioPost = {
@@ -47,6 +62,12 @@ const audioPost = {
     "authorization": "5fda6a4e547e45ca8bd01dbc71afec04",
     "cache-control": "no-cache",
     "postman-token": "2b11a974-5004-3882-4d14-21c0d92ca94a"
+  },
+  "beforeSend" : function() {
+    loader.classList.remove("d-none");
+  },
+  "success" : function() {
+    loader.classList.add("d-none");
   }
 }
 const audioGetText = {
@@ -122,6 +143,8 @@ function postTextToSpeech()
   audioPost.data = JSON.stringify({"audio_src_url" : bucketUrl}) 
 
   $.ajax(audioPost).done(response => {
+
+    loader.classList.remove("d-none");
     let intervalId = setInterval(() => {
       checkForText(response.transcript.id, intervalId);
     }, 3000);
@@ -139,6 +162,7 @@ function checkForText(textId, intervalId)
     {
       //logic and clear
       clearInterval(intervalId);
+      loader.classList.add("d-none")
       analyzeText.value = response.transcript.text
     }
     
