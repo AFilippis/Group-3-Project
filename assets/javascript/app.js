@@ -138,7 +138,6 @@ function checkForText(textId, intervalId)
     if(response.transcript.status === "completed")
     {
       //logic and clear
-      console.log(response);
       clearInterval(intervalId);
       analyzeText.value = response.transcript.text
     }
@@ -148,9 +147,10 @@ function checkForText(textId, intervalId)
 
 function createFullTextHTML(response)
 {
+  let toneArray = [];
   let sentenceHolder = document.createElement("div");
   sentenceHolder.id = "emotion-id";
-  console.log(response);
+  
   if(response.sentences_tone !== undefined)
   {
     response.sentences_tone.forEach((element) => 
@@ -163,6 +163,10 @@ function createFullTextHTML(response)
         element.tones.forEach((innerElement) => 
         {
           newSpan.dataset[innerElement.tone_name.toLowerCase()] = innerElement.score;
+          if(!toneArray.includes(innerElement.tone_name.toLowerCase()))
+          {
+            toneArray.push(innerElement.tone_name.toLowerCase());
+          }
         });
       }
   
@@ -182,6 +186,7 @@ function createFullTextHTML(response)
         response.document_tone.tones.forEach((innerElement) => 
         {
           newSpan.dataset[innerElement.tone_name.toLowerCase()] = innerElement.score;
+          toneArray.push(innerElement.tone_name.toLowerCase());
         });
       }
   
@@ -191,6 +196,8 @@ function createFullTextHTML(response)
 
   textResult.innerHTML = "";
   textResult.appendChild(sentenceHolder);
+
+  hideButtons(toneArray);
 }
 
 function changeEmotionHighlight(emotion)
@@ -209,17 +216,14 @@ function changeEmotionHighlight(emotion)
     if(parseFloat(element.dataset[emotion]) < .5)
     {
       element.classList = "emotion-p highlight-" + emotion + "-low";
-      console.log(element.dataset[emotion]);
     }
     else if(parseFloat(element.dataset[emotion]) < .75)
     {
       element.classList = "emotion-p highlight-" + emotion + "-medium";
-      console.log(element.dataset[emotion]);
     }
     else
     {
       element.classList = "emotion-p highlight-" + emotion + "-high";
-      console.log(element.dataset[emotion]);
     }
   });
 
@@ -228,7 +232,6 @@ function changeEmotionHighlight(emotion)
 function changeEmotionBlurb(emotion)
 {
   emotionBlurbs = document.querySelectorAll(".emotion-blurb");
-  console.log(emotion);
   emotionBlurbs.forEach(element => {
     if(!element.classList.contains("d-none"))
     {
@@ -239,4 +242,21 @@ function changeEmotionBlurb(emotion)
       element.classList.remove("d-none");
     }
   });
+}
+
+function hideButtons(tones)
+{
+  emotionButtonArray.forEach(element => {
+    if(!tones.includes(element.id.replace("filter-", "")))
+    {
+      if(!element.classList.contains("d-none"))
+      {
+        element.classList.add("d-none");
+      }
+    }
+    else
+    {
+      element.classList.remove("d-none");
+    }
+  })
 }
