@@ -345,15 +345,30 @@ ul {
 }
 
 /* Media responsiveness */
-@media only screen and (max-width: 980px) {
+@media only screen and (max-width: 992px) {
   /* Stuff here, reg css */
+  #app-result-card{
+    margin-top: 24px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
   /* Stuff here, reg css */
+  #dev-card-3{
+    margin-top: 24px;
+  }
+  #dev-card-4{
+    margin-top: 24px;
+  }
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 576px) {
   /* Stuff here, reg css */
+  #dev-card-1{
+    margin-top: 24px;
+  }
+  #dev-card-2{
+    margin-top: 24px;
+  }
 }
 
