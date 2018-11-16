@@ -4,7 +4,25 @@ const textResult = document.querySelector("#analyzeInputTextResult");
 const emotionButtonArray = Array.from(document.querySelectorAll(".filter-selector-btn"));
 const randomGeneratedFile = "mued-upload-" + parseInt(Date.now() * Math.random()) +".mp3";
 const bucketUrl = "https://meud-audio.s3.amazonaws.com/" + randomGeneratedFile;
-const uploadButton = document.querySelector("#file-name");
+const uploadButton = document.querySelector("#audio-upload-btn");
+const audioFileInput = document.querySelector("#audio-file-input");
+
+
+var awsSend = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://cors-anywhere.herokuapp.com/https://meud-audio.s3.amazonaws.com/",
+  "method": "POST",
+  "headers": {
+    "enctype": "multipart/form-data",
+    "cache-control": "no-cache",
+    "postman-token": "5e763941-048a-b0da-cfe3-9c026d0350e0"
+  },
+  "processData": false,
+  "contentType": false,
+  "mimeType": "multipart/form-data",
+}
+
 
 
 
@@ -45,7 +63,6 @@ const audioGetText = {
 
 
 //set unique document name
-document.querySelector("#file-name").value = randomGeneratedFile;
 
 
 //postTextToSpeech();
@@ -66,7 +83,24 @@ document.addEventListener("click", (event) => {
     event.preventDefault();
     changeEmotionHighlight(event.target.id.replace("filter-", ""));
   }
+  if(event.target === uploadButton)
+  {
+    event.preventDefault();
+    awsUpload();
+  }
+
 });
+
+function awsUpload()
+{
+  var form = new FormData();
+  form.append("key", randomGeneratedFile);
+  form.append("file", audioFileInput.files[0]);
+  awsSend.data = form;
+  $.ajax(awsSend).done(function (response) {
+    postTextToSpeech();
+  });
+}
 
 function analyzeApi(text)
 {
@@ -105,7 +139,7 @@ function checkForText(textId, intervalId)
       //logic and clear
       console.log(response);
       clearInterval(intervalId);
-      analyzeApi(response.transcript.text);
+      analyzeText.value = response.transcript.text
     }
     
   });
