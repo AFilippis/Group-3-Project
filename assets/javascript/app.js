@@ -82,6 +82,7 @@ document.addEventListener("click", (event) => {
   {
     event.preventDefault();
     changeEmotionHighlight(event.target.id.replace("filter-", ""));
+    changeEmotionBlurb(event.target.id.replace("filter-", ""));
   }
   if(event.target === uploadButton)
   {
@@ -222,4 +223,20 @@ function changeEmotionHighlight(emotion)
     }
   });
 
+}
+
+function changeEmotionBlurb(emotion)
+{
+  emotionBlurbs = document.querySelectorAll(".emotion-blurb");
+  console.log(emotion);
+  emotionBlurbs.forEach(element => {
+    if(!element.classList.contains("d-none"))
+    {
+      element.classList.add("d-none")
+    }
+    if(element.classList.contains("emotion-"+emotion))
+    {
+      element.classList.remove("d-none");
+    }
+  });
 }
