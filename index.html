@@ -10,10 +10,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <!-- <link href="https://fonts.googleapis.com/css?family=Unica+One" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Syncopate" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Megrim" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat+Subrayada" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css?family=Snippet" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Bungee+Hairline" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -24,157 +20,167 @@
 </head>
 
 <body>
-    <div id="blackout">
-        <!-- Entry Page -->
-        <!-- <wrapper>
-        <h1>Meud</h1>
-        <h3>Subtext, simplified</h3>
-        <button>Enter</button>
-    </wrapper> -->
+    <!-- Header and Navbar -->
+    <header>
+        <div id="header-container" class="container-fluid">
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="assets/images/meud-logo.png" width="200" height="85" alt="">
+                </div>
 
-        <!-- Header and Navbar -->
-        <header>
-            <div id="header-container" class="container-fluid">
-                <nav class="navbar">
-                    <div class="navbar-brand text-white">
-                        <h1 class="MEUD-logo">ME<span class="text-color-cham">U</span>D</h1>
-                    </div>
+                <ul class="nav">
+                    <li id="app-link" class="nav-item">
+                        <a class="nav-link text-light" href="index.html">APPLICATION</a>
+                    </li>
+                    <li id="mission-link" class="nav-item">
+                        <a class="nav-link text-light" href="mission.html">OUR MISSION</a>
+                    </li>
+                    <li id="dev-link" class="nav-item">
+                        <a class="nav-link text-light" href="developers.html">DEVELOPERS</a>
+                    </li>
+                </ul>
 
-                    <ul class="nav">
-                        <li id="app-link" class="nav-item">
-                            <a class="nav-link text-light" href="index.html">APPLICATION</a>
-                        </li>
-                        <li id="mission-link" class="nav-item">
-                            <a class="nav-link text-light" href="mission.html">OUR MISSION</a>
-                        </li>
-                        <li id="dev-link" class="nav-item">
-                            <a class="nav-link text-light" href="developers.html">DEVELOPERS</a>
-                        </li>
-                    </ul>
+            </nav>
+        </div>
+    </header>
 
-                </nav>
-            </div>
-        </header>
+    <div class="line-break"></div>
 
-        <div class="line-break"></div>
-
-        <!-- Main Content -->
-        <main>
-            <div id="main-content-wrapper">
-                <div class="container col-lg-11">
-                    <!-- Initial info - what it does -->
-                    <div class="info-container container-fluid">
-                        <div class="row">
-                            <div class="container text-center col-lg-11">
-                                <h3>WELCOME TO <span>ME<span class="text-color-cham">U</span>D</span></h3>
-                                <hr>
-                                <p class="text-dark">Test resumes, business e-mails, articles, tweets, and
-                                    various other
-                                    forms of text for different tones. Our application utilizing the powerful
-                                    APIs of IBM's Watson and (insert other API here) will return a result for you
-                                    analyzed
-                                    for
-                                    varying degrees of tones.
-                                </p>
-                            </div>
+    <!-- Main Content -->
+    <main>
+        <div id="main-content-wrapper">
+            <div class="container col-lg-11 col-md-12 col-sm-12">
+                <!-- Initial info - what it does -->
+                <div class="info-container container-fluid">
+                    <div class="row">
+                        <div class="container text-center col-lg-11">
+                            <h3>WELCOME TO <span>ME<span class="text-color-cham">U</span>D</span></h3>
+                            <hr>
+                            <p class="text-dark">Test resumes, business e-mails, articles, tweets, and
+                                various other
+                                forms of text for different tones. Our application utilizing the powerful
+                                APIs of IBM's Watson and (insert other API here) will return a result for you
+                                analyzed
+                                for
+                                varying degrees of tones.
+                            </p>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="line-break"></div>
+            <div class="line-break"></div>
 
-                <!-- Application -->
-                <div id="content-wrapper" class="container-fluid">
-                    <div class="container col-lg-10">
-                        <div class="row">
-                            <!-- Application Input -->
-                            <div class="col-md-4">
-                                <div id="app-input-card" class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title text-center"><strong>INPUT</strong></h5>
+            <!-- Application -->
+            <div id="content-wrapper" class="container-fluid">
+                <div class="container col-lg-10 col-md-12 col-sm-12">
+                    <div class="row">
+                        <!-- Application Input -->
+                        <div class="col-lg-4 col-md-12 col-sm-12">
+                            <div id="app-input-card" class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title text-center"><strong>INPUT</strong></h5>
+                                    <hr>
+                                    <form>
+                                        <div class="form-group">
+                                            <textarea type="inputText" class="form-control" id="analyzeInputText"
+                                                placeholder="Enter text here." rows="11"></textarea>
+                                            <small id="analyzeHelp" class="form-text text-muted">Enter the text
+                                                you
+                                                want
+                                                analyzed for different tones.</small>
+                                        </div>
+                                        <button id="analyze-btn" type="submit" class="btn">
+                                            ANALYZE
+                                        </button>
+
                                         <hr>
-                                        <form>
-                                            <div class="form-group">
-                                                <textarea type="inputText" class="form-control" id="analyzeInputText"
-                                                    placeholder="Enter text here." rows="11"></textarea>
-                                                <small id="analyzeHelp" class="form-text text-muted">Enter the text
-                                                    you
-                                                    want
-                                                    analyzed for different tones.</small>
-                                            </div>
-                                            <button id="analyze-btn" type="submit" class="btn">
-                                                ANALYZE
-                                            </button>
-                                            
-                                            <hr>
-                                            <small id="audio-help" class="text-muted">OR you can convert an audio file to text to analyze.</small>
-                                            <div class="line-break"></div>
-                                            <form action="http://meud-audio.s3.amazonaws.com/" method="post" enctype="multipart/form-data">
-                                                <input type="hidden" value="" id="file-name" name="key">
-                                                <input type="file" name="file">
-                                                <div class="line-break"></div>
-                                                <button id="audio-upload-btn" class="btn">SUBMIT AUDIO</button>
-                                            </form>
-                                        </form>
-                                    </div>
+                                    </form>
+                                    <small id="audio-help" class="text-muted">OR you can convert an audio file to text
+                                        to analyze.</small>
+                                    <form>
+                                        <input id="audio-file-input" type="file" name="file">
+                                        <div class="line-break"></div>
+                                        <button id="audio-upload-btn" class="btn">SUBMIT AUDIO</button>
+                                    </form>
                                 </div>
                             </div>
+                        </div>
 
-                            <!-- Application Result -->
-                            <div class="container col-md-8">
-                                <div id="app-result-card" class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title text-center"><strong>RESULT</strong></h5>
-                                        <hr>
-                                        <!-- Tone filter selector -->
-                                        <div class="row">
-                                            <div id="filters" class="col-sm-3 text-center">
-                                                <div id="filters-tone-list">
-                                                    <ul id="tone-selectors">
+                        <div id="media-query-break"></div>
 
-                                                        <li>
-                                                            <h6 class="text-left">TONES</h6>
-                                                        </li>
-                                                        <hr>
-                                                        <li id="filter-analytical" class="filter-selector-btn btn">ANALYTICAL</li>
-                                                        <li id="filter-anger" class="filter-selector-btn btn ">ANGER</li>
-                                                        <li id="filter-confident" class="filter-selector-btn btn ">CONFIDENT</li>
-                                                        <li id="filter-fear" class="filter-selector-btn btn">FEAR</li>
-                                                        <li id="filter-joy" class="filter-selector-btn btn">JOY</li>
-                                                        <li id="filter-sadness" class="filter-selector-btn btn">SADNESS</li>
-                                                        <li id="filter-tentative" class="filter-selector-btn btn">TENTATIVE</li>
+                        <!-- Application Result -->
+                        <div class="container col-lg-8 col-md-12 col-sm-12">
+                            <div id="app-result-card" class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title text-center"><strong>RESULT</strong></h5>
+                                    <hr>
+                                    <!-- Tone filter selector -->
+                                    <div class="row">
+                                        <div id="filters" class="col-lg-3 col-md-3 col-sm-3 text-center">
+                                            <div id="filters-tone-list">
+                                                <ul id="tone-selectors">
 
-                                                    </ul>
-                                                </div>
+                                                    <li>
+                                                        <h6 class="text-left">TONES</h6>
+                                                    </li>
+                                                    <hr>
+                                                    <li>
+                                                        <button id="filter-analytical" class="filter-selector-btn btn"
+                                                            type="button">ANALYTICAL</button></li>
+                                                    <li>
+                                                        <button id="filter-anger" class="filter-selector-btn btn" type="button">ANGER</button>
+                                                    </li>
+                                                    <li>
+                                                        <button id="filter-confident" class="filter-selector-btn btn"
+                                                            type="button">CONFIDENT</button>
+                                                    </li>
+                                                    <li>
+                                                        <button id="filter-fear" class="filter-selector-btn btn" type="button">FEAR</button>
+                                                    </li>
+                                                    <li>
+                                                        <button id="filter-joy" class="filter-selector-btn btn" type="button">JOY</button>
+                                                    </li>
+                                                    <li>
+                                                        <button id="filter-sadness" class="filter-selector-btn btn"
+                                                            type="button">SADNESS</button>
+                                                    </li>
+                                                    <li>
+                                                        <button id="filter-tentative" class="filter-selector-btn btn"
+                                                            type="button">TENTATIVE</button>
+                                                    </li>
+
+                                                </ul>
                                             </div>
-                                            <!-- Tone filter selected descriptor -->
-                                            <div class="col-sm-9">
-                                                <div id="context-box" class="card">
-                                                    <div class="card-body">
-                                                        <h6 class="card-title">CONTEXT</h6>
-                                                        <hr>
-                                                        <div>
-                                                            <span id="filter-descriptor">
-                                                                The description of the selected filter will go
-                                                                here.
-                                                            </span>
-                                                        </div>
-
-                                                        <div class="line-break"></div>
-
-                                                        <!-- Legend for highlighted text tone strength -- Needs work -- Needs to make 3 divs, different colors, appended with tone-strength number -->
-                                                        <div id="filter-strength-legend">
-                                                            The colors will appear more saturated with the severity of the tone selected.
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- The display of the input text -- text will highlight here according to selected tone filter -->
-                                                <div class="card">
-                                                    <div class="card-body">
-                                                        <span id="analyzeInputTextResult">
-                                                            This is where the computed text will appear.
+                                        </div>
+                                        <!-- Tone filter selected descriptor -->
+                                        <div class="col-lg-9 col-md-9 col-sm-9">
+                                            <div id="context-box" class="card">
+                                                <div class="card-body">
+                                                    <h6 class="card-title">CONTEXT</h6>
+                                                    <hr>
+                                                    <div>
+                                                        <span id="filter-descriptor">
+                                                            The description of the selected filter will go
+                                                            here.
                                                         </span>
                                                     </div>
+
+                                                    <div class="line-break"></div>
+
+                                                    <!-- Legend for highlighted text tone strength -- Needs work -- Needs to make 3 divs, different colors, appended with tone-strength number -->
+                                                    <div id="filter-strength-legend">
+                                                        The colors will appear more saturated with the severity of the
+                                                        tone selected.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- The display of the input text -- text will highlight here according to selected tone filter -->
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <span id="analyzeInputTextResult">
+                                                        This is where the computed text will appear.
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
@@ -185,43 +191,42 @@
                     </div>
                 </div>
             </div>
-        </main>
+        </div>
+    </main>
 
 
-        <div class="line-break"></div>
+    <div class="line-break"></div>
 
 
-        <!-- Footer -->
-        <footer>
-            <div id="footer-container" class="container-fluid  text-center">
-                <nav id="footer-navbar" class="navbar">
-                    <ul id="footer-nav" class="nav mx-auto">
-                        <li id="footer-app-link" class="footer-nav-item nav-item">
-                            <a class="nav-link text-light" href="index.html">APPLICATION</a>
-                        </li>
-                        <li id="footer-dev-link" class="footer-nav-item nav-item">
-                            <a class="nav-link text-light" href="mission.html">OUR MISSION</a>
-                        </li>
-                        <li id="footer-dev-link" class="footer-nav-item nav-item">
-                            <a class="nav-link text-light" href="developers.html">DEVELOPERS</a>
-                        </li>
-                    </ul>
-                </nav>
-                <hr>
-                <div class="container">
-                    <div id="copyright-container" class="container">&copy; <span class="MEUD-logo text-white">ME<span
-                                class="text-color-cham">U</span>D</span>
-                        | Made
-                        during and developed for UNC Coding Bootcamp 2018-2019.</div>
-                </div>
+    <!-- Footer -->
+    <footer>
+        <div id="footer-container" class="container-fluid  text-center">
+            <nav id="footer-navbar" class="navbar">
+                <ul id="footer-nav" class="nav mx-auto">
+                    <li id="footer-app-link" class="footer-nav-item nav-item">
+                        <a class="nav-link text-light" href="index.html">APPLICATION</a>
+                    </li>
+                    <li id="footer-dev-link" class="footer-nav-item nav-item">
+                        <a class="nav-link text-light" href="mission.html">OUR MISSION</a>
+                    </li>
+                    <li id="footer-dev-link" class="footer-nav-item nav-item">
+                        <a class="nav-link text-light" href="developers.html">DEVELOPERS</a>
+                    </li>
+                </ul>
+            </nav>
+            <hr>
+            <div class="container">
+                <div id="copyright-container" class="container">&copy; <span class="MEUD-logo text-white">ME<span class="text-color-cham">U</span>D</span>
+                    | Made
+                    during and developed for UNC Coding Bootcamp 2018-2019.</div>
             </div>
-        </footer>
-
-    </div>
+        </div>
+    </footer>
 
     <!-- Scripts -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/javascript/app.js"></script>
+    <script type="text/javascript" src="assets/javascript/styling.js"></script>
 </body>
 
 </html>
