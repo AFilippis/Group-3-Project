@@ -6,6 +6,7 @@
 html {
   height: -100%;
 }
+
 body {
   font-family: "Georgia", serif;
   height: -100%;
@@ -16,13 +17,101 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  /* font-family: 'Julius Sans One', sans-serif; */
   font-family: "Raleway", sans-serif;
+}
+
+a {
+  color: black;
 }
 
 .line-break {
   width: 100%;
   height: 24px;
+}
+
+/* Enter page */
+#blackout {
+  position: fixed;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0);
+}
+
+#enter-logo {
+  height: 650px;
+}
+
+#enter-main {
+  -webkit-animation: fadein 2.5s; /* Safari, Chrome and Opera > 12.1 */
+     -moz-animation: fadein 2.5s; /* Firefox < 16 */
+      -ms-animation: fadein 2.5s; /* Internet Explorer */
+       -o-animation: fadein 2.5s; /* Opera < 12.1 */
+          animation: fadein 2.5s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+#slogan-text {
+  font-family: "Raleway", sans-serif;
+  position: relative;
+  font-size: 32px;
+  bottom: 100px;
+}
+
+#enter-btn {
+  font-family: "Raleway", sans-serif;
+  font-size: 36px;
+  background-color: white;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+#enter-btn:hover {
+  color: white;
+  background-color: #424242;
+  box-shadow: 0 1px 5px 0 rgb(66, 66, 66), 0 1px 5px 0 rgb(66, 66, 66);
 }
 
 /* Header */
@@ -51,12 +140,10 @@ h1.MEUD-logo {
   font-family: "Raleway", sans-serif;
 }
 
-
 #mission-link {
   border-right: 1px solid black;
   border-left: 1px solid black;
 }
-/* Enter Page */
 
 /* Info */
 .info-container {
@@ -70,9 +157,10 @@ h1.MEUD-logo {
 h3 > span.MEUD-logo {
   font-size: 32px;
 }
+
 /* Main application body */
 #main-content-wrapper {
-  min-height: 686px;
+  min-height: 654px;
   max-height: 100%;
 }
 
@@ -114,13 +202,13 @@ h3 > span.MEUD-logo {
   box-shadow: 0 1px 5px 0 rgb(66, 66, 66), 0 1px 5px 0 rgb(66, 66, 66);
 }
 
-#audio-upload-btn{
+#audio-upload-btn {
   font-family: "Raleway", sans-serif;
   font-size: 15px;
   background-color: white;
 }
 
-#audio-upload-btn:hover{
+#audio-upload-btn:hover {
   color: white;
   background-color: #424242;
   box-shadow: 0 1px 5px 0 rgb(66, 66, 66), 0 1px 5px 0 rgb(66, 66, 66);
@@ -347,32 +435,32 @@ ul {
 /* Media responsiveness */
 @media only screen and (max-width: 992px) {
   /* Stuff here, reg css */
-  #app-result-card{
+  #app-result-card {
     margin-top: 24px;
   }
 }
 
 @media only screen and (max-width: 768px) {
   /* Stuff here, reg css */
-  #dev-card-3{
+  #dev-card-3 {
     margin-top: 24px;
   }
-  #dev-card-4{
+  #dev-card-4 {
     margin-top: 24px;
   }
 }
 
 @media only screen and (max-width: 576px) {
   /* Stuff here, reg css */
-  #dev-card-1{
+  #dev-card-1 {
     margin-top: 24px;
   }
-  #dev-card-2{
+  #dev-card-2 {
     margin-top: 24px;
   }
 }
 
-html,body{
+/* html,body{
 	background:#000;
 	margin:0;
 }
@@ -413,4 +501,4 @@ html,body{
 	0%{left:80%;}
 	50%{left:50%;}
 	100%{left:80%;}
-}
+} */
