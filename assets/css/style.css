@@ -202,12 +202,7 @@ h3 > span.MEUD-logo {
   box-shadow: 0 1px 5px 0 rgb(66, 66, 66), 0 1px 5px 0 rgb(66, 66, 66);
 }
 
-<<<<<<< HEAD
-
-#audio-upload-btn{
-=======
 #audio-upload-btn {
->>>>>>> 2df9752ffb629acdebf77c8a7891d61b530b4ce3
   font-family: "Raleway", sans-serif;
   font-size: 15px;
   background-color: white;
@@ -438,16 +433,10 @@ ul {
 }
 
 /* Media responsiveness */
-<<<<<<< HEAD
-@media only screen and (max-width: 500px) {
-  .colomn-md-8 {
-    margin-top: 40px !important;
-=======
 @media only screen and (max-width: 992px) {
   /* Stuff here, reg css */
   #app-result-card {
     margin-top: 24px;
->>>>>>> 2df9752ffb629acdebf77c8a7891d61b530b4ce3
   }
 }
 
@@ -471,10 +460,7 @@ ul {
   }
 }
 
-/* html,body{
-	background:#000;
-	margin:0;
-}
+/* Loader */
 .loader{
 	width:400px;
 	height:400px;
@@ -512,4 +498,4 @@ ul {
 	0%{left:80%;}
 	50%{left:50%;}
 	100%{left:80%;}
-} */
+}
