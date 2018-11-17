@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Snippet" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Hairline" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Title -->
+    <title>MEUD Prototype</title>
+
+</head>
+
+<body>
+    <!-- Header and Navbar -->
+    <header>
+        <div id="header-container" class="container-fluid">
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="assets/images/meud-logo.png" width="200" height="85" alt="">
+                </div>
+
+                <ul class="nav">
+                    <li id="app-link" class="nav-item">
+                        <a class="nav-link text-light" href="index.html">APPLICATION</a>
+                    </li>
+                    <li id="mission-link" class="nav-item">
+                        <a class="nav-link text-light" href="mission.html">OUR MISSION</a>
+                    </li>
+                    <li id="dev-link" class="nav-item">
+                        <a class="nav-link text-light" href="developers.html">DEVELOPERS</a>
+                    </li>
+                </ul>
+
+            </nav>
+        </div>
+    </header>
+
+    <div class="line-break"></div>
+
+    <!-- Main Content -->
+    <main>
+        <div id="main-content-wrapper">
+            <div class="container col-lg-11 col-md-12 col-sm-12">
+                <!-- Initial info - what it does -->
+                <div class="info-container container-fluid">
+                    <div class="row">
+                        <div class="container text-center col-lg-11">
+                            <h3>WELCOME TO <span>ME<span class="text-color-cham">U</span>D</span></h3>
+                            <hr>
+                            <p class="text-dark">Test resumes, business e-mails, articles, tweets, and
+                                various other
+                                forms of text for different tones. Our application utilizes the powerful
+                                APIs of IBM's Watson, AssemblyAI, and Amazon's S3 Bucket. It will return a result
+                                analyzed
+                                for
+                                varying degrees of tones.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="line-break"></div>
+
+            <!-- Application -->
+            <div id="content-wrapper" class="container-fluid">
+                <div class="container col-lg-10 col-md-12 col-sm-12">
+                    <div class="row">
+                        <!-- Application Input -->
+                        <div class="col-lg-4 col-md-12 col-sm-12">
+                            <div id="app-input-card" class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title text-center"><strong>INPUT</strong></h5>
+                                    <hr>
+                                    <form>
+                                        <div class="form-group">
+                                            <textarea type="inputText" class="form-control" id="analyzeInputText"
+                                                placeholder="Enter text here." rows="11"></textarea>
+                                            <small id="analyzeHelp" class="form-text text-muted">Enter the text
+                                                you
+                                                want
+                                                analyzed for different tones.</small>
+                                        </div>
+                                        <button id="analyze-btn" type="submit" class="btn">
+                                            ANALYZE
+                                        </button>
+
+                                        <hr>
+                                    </form>
+                                    <small id="audio-help" class="text-muted">OR you can convert an audio file to text
+                                        to analyze.</small>
+                                    <form>
+                                        <input id="audio-file-input" type="file" name="file">
+                                        <div class="line-break"></div>
+                                        <button id="audio-upload-btn" class="btn">SUBMIT AUDIO</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="media-query-break"></div>
+
+                        <!-- Application Result -->
+                        <div class="container col-lg-8 col-md-12 col-sm-12">
+                            <div id="app-result-card" class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title text-center"><strong>RESULT</strong></h5>
+                                    <hr>
+                                    <!-- Tone filter selector -->
+                                    <div class="row">
+                                        <div id="filters" class="col-lg-3 col-md-3 col-sm-3 text-center">
+                                            <div id="filters-tone-list">
+                                                <ul id="tone-selectors">
+
+                                                    <li>
+                                                        <h6 class="text-left">TONES</h6>
+                                                    </li>
+                                                    <hr>
+                                                    <li>
+                                                        <button id="filter-analytical" class="filter-selector-btn btn"
+                                                            type="button">ANALYTICAL</button></li>
+                                                    <li>
+                                                        <button id="filter-anger" class="filter-selector-btn btn" type="button">ANGER</button>
+                                                    </li>
+                                                    <li>
+                                                        <button id="filter-confident" class="filter-selector-btn btn"
+                                                            type="button">CONFIDENT</button>
+                                                    </li>
+                                                    <li>
+                                                        <button id="filter-fear" class="filter-selector-btn btn" type="button">FEAR</button>
+                                                    </li>
+                                                    <li>
+                                                        <button id="filter-joy" class="filter-selector-btn btn" type="button">JOY</button>
+                                                    </li>
+                                                    <li>
+                                                        <button id="filter-sadness" class="filter-selector-btn btn"
+                                                            type="button">SADNESS</button>
+                                                    </li>
+                                                    <li>
+                                                        <button id="filter-tentative" class="filter-selector-btn btn"
+                                                            type="button">TENTATIVE</button>
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- Tone filter selected descriptor -->
+                                        <div class="col-lg-9 col-md-9 col-sm-9">
+                                            <div id="context-box" class="card">
+                                                <div class="card-body">
+                                                    <h6 class="card-title">CONTEXT</h6>
+                                                    <hr>
+                                                    <div>
+                                                        <span id="filter-descriptor">
+                                                            <p class="emotion-blurb">A descriptor of the selected tone
+                                                                will appear here.</p>
+                                                            <p class="emotion-blurb emotion-analytical d-none">Analytical:
+                                                                A person's reasoning and analytical attitude about
+                                                                things </p>
+                                                            <p class="emotion-blurb emotion-anger d-none"> Anger:
+                                                                Evoked due to injustice, conflict, humiliation,
+                                                                negligence or betrayal. If anger is active, the
+                                                                individual attacks the target, verbally or physically.
+                                                                If anger is passive, the person silently sulks and
+                                                                feels tension and hostility.
+                                                            </p>
+                                                            <p class="emotion-blurb emotion-confident d-none">Confident:
+                                                                A person's degree of certainty</p>
+                                                            <p class="emotion-blurb emotion-fear d-none">Fear: A
+                                                                response to impending danger. It is a survival
+                                                                mechanism that is a reaction to some negative stimulus.
+                                                                It may be a mild caution or an extreme phobia.</p>
+                                                            <p class="emotion-blurb emotion-joy d-none">Joy: Joy or
+                                                                happiness has shades of enjoyment, satisfaction and
+                                                                pleasure. There is a sense of well-being, inner peace,
+                                                                love, safety and contentment. </p>
+                                                            <p class="emotion-blurb emotion-sadness d-none">Sadness:
+                                                                Indicates a feeling of loss and disadvantage. When a
+                                                                person can be observed to be quiet, less energetic and
+                                                                withdrawn, it may be inferred that sadness exists. </p>
+                                                            <p class="emotion-blurb emotion-tentative d-none">Tentative:
+                                                                A person's degree of inhibition </p>
+                                                        </span>
+                                                    </div>
+
+                                                    <div class="line-break"></div>
+
+                                                    <!-- Legend for highlighted text tone strength -- Needs work -- Needs to make 3 divs, different colors, appended with tone-strength number -->
+                                                    <div id="filter-strength-legend">
+                                                        The colors will appear more saturated with the severity of the
+                                                        tone selected.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- The display of the input text -- text will highlight here according to selected tone filter -->
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <span id="analyzeInputTextResult">
+                                                        This is where the computed text will appear.
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <div class="line-break"></div>
+
+
+    <!-- Footer -->
+    <footer>
+        <div id="footer-container" class="container-fluid  text-center">
+            <nav id="footer-navbar" class="navbar">
+                <ul id="footer-nav" class="nav mx-auto">
+                    <li id="footer-app-link" class="footer-nav-item nav-item">
+                        <a class="nav-link text-light" href="index.html">APPLICATION</a>
+                    </li>
+                    <li id="footer-dev-link" class="footer-nav-item nav-item">
+                        <a class="nav-link text-light" href="mission.html">OUR MISSION</a>
+                    </li>
+                    <li id="footer-dev-link" class="footer-nav-item nav-item">
+                        <a class="nav-link text-light" href="developers.html">DEVELOPERS</a>
+                    </li>
+                </ul>
+            </nav>
+            <hr>
+            <div class="container">
+                <div id="copyright-container" class="container">&copy; <span class="MEUD-logo text-white">ME<span class="text-color-cham">U</span>D</span>
+                    | Made
+                    during and developed for UNC Coding Bootcamp 2018-2019.</div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="loader" class="loader d-none">
+        <div class="blob-1"></div>
+        <div class="blob-2"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+    <script type="text/javascript" src="assets/javascript/styling.js"></script>
+</body>
+
+</html>
