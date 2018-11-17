@@ -114,6 +114,7 @@ h3 > span.MEUD-logo {
   box-shadow: 0 1px 5px 0 rgb(66, 66, 66), 0 1px 5px 0 rgb(66, 66, 66);
 }
 
+
 #audio-upload-btn{
   font-family: "Raleway", sans-serif;
   font-size: 15px;
@@ -346,8 +347,10 @@ ul {
 }
 
 /* Media responsiveness */
-@media only screen and (max-width: 980px) {
-  /* Stuff here, reg css */
+@media only screen and (max-width: 500px) {
+  .colomn-md-8 {
+    margin-top: 40px !important;
+  }
 }
 
 @media only screen and (max-width: 768px) {
